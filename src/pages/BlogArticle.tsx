@@ -2,13 +2,22 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Calendar, User, Clock, Share2, Linkedin, Twitter, Facebook } from "lucide-react";
-import heroImage from "@/assets/hero-event.jpg";
-import serviceDecoration from "@/assets/service-decoration.jpg";
-import serviceScenography from "@/assets/service-scenography.jpg";
-import serviceLogistique from "@/assets/service-logistique.jpg";
-import serviceCorporate from "@/assets/service-corporate.jpg";
-import serviceInternational from "@/assets/service-international.jpg";
+import { ArrowLeft, ArrowRight, Calendar, User, Clock, Share2, Linkedin, Twitter, Facebook, ChevronRight } from "lucide-react";
+import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+import salonProfessionnelVue from "@/assets/salon-professionnel-vue-ensemble.jpg";
+import montageStandParis from "@/assets/montage-stand-salon-paris.jpg";
+import logistiqueEvenementielle from "@/assets/logistique-evenementielle-chargement.jpg";
+import scenographieStandPremium from "@/assets/scenographie-stand-premium.jpg";
+import supportTechniqueEvenement from "@/assets/support-technique-evenement.jpg";
+import evenementInternational from "@/assets/evenement-international-conference.jpg";
 
 const articlesData: Record<string, {
   title: string;
@@ -23,7 +32,7 @@ const articlesData: Record<string, {
   "organisation-technique-salon-professionnel": {
     title: "Organisation technique d'un salon professionnel : le guide complet",
     excerpt: "De la planification au démontage, découvrez les étapes clés pour réussir votre participation à un salon professionnel et optimiser votre retour sur investissement.",
-    image: heroImage,
+    image: salonProfessionnelVue,
     category: "Salons",
     author: "Équipe BA ATTITUDE",
     date: "15 Décembre 2024",
@@ -56,7 +65,7 @@ const articlesData: Record<string, {
   "logistique-evenementielle-internationale": {
     title: "Logistique événementielle internationale : défis et solutions",
     excerpt: "Comment organiser la logistique d'un événement à l'étranger ? Transport, douanes, coordination locale : nos conseils d'experts.",
-    image: serviceInternational,
+    image: evenementInternational,
     category: "International",
     author: "Équipe BA ATTITUDE",
     date: "10 Décembre 2024",
@@ -80,7 +89,7 @@ const articlesData: Record<string, {
   "montage-demontage-stands-bonnes-pratiques": {
     title: "Montage et démontage de stands : les bonnes pratiques",
     excerpt: "Optimisez vos temps de montage et démontage grâce à nos conseils issus de 15 ans d'expérience sur les plus grands salons.",
-    image: serviceLogistique,
+    image: montageStandParis,
     category: "Conseils",
     author: "Équipe BA ATTITUDE",
     date: "5 Décembre 2024",
@@ -104,7 +113,7 @@ const articlesData: Record<string, {
   "tendances-stands-2024": {
     title: "Tendances des stands d'exposition en 2024",
     excerpt: "Éco-conception, technologie immersive, espaces modulables : les grandes tendances qui transforment les stands sur les salons professionnels.",
-    image: serviceScenography,
+    image: scenographieStandPremium,
     category: "Salons",
     author: "Équipe BA ATTITUDE",
     date: "28 Novembre 2024",
@@ -128,7 +137,7 @@ const articlesData: Record<string, {
   "choisir-prestataire-evenementiel": {
     title: "Comment choisir son prestataire événementiel B2B ?",
     excerpt: "Les critères essentiels pour sélectionner un partenaire fiable pour vos salons et événements professionnels.",
-    image: serviceCorporate,
+    image: supportTechniqueEvenement,
     category: "Conseils",
     author: "Équipe BA ATTITUDE",
     date: "20 Novembre 2024",
@@ -152,7 +161,7 @@ const articlesData: Record<string, {
   "securite-salons-professionnels": {
     title: "Sécurité sur les salons professionnels : normes et obligations",
     excerpt: "Réglementation, normes ERP, équipements obligatoires : tout ce que vous devez savoir sur la sécurité lors de vos événements.",
-    image: serviceDecoration,
+    image: logistiqueEvenementielle,
     category: "Logistique",
     author: "Équipe BA ATTITUDE",
     date: "15 Novembre 2024",
@@ -204,8 +213,50 @@ export default function BlogArticle() {
 
   return (
     <Layout>
+      <SEOHead 
+        title={`${article.title} | Blog BA Attitude`}
+        description={article.excerpt}
+        canonical={`https://baattitude.fr/blog/${articleId}`}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: "Accueil", url: "https://baattitude.fr" },
+          { name: "Blog", url: "https://baattitude.fr/blog" },
+          { name: article.title, url: `https://baattitude.fr/blog/${articleId}` }
+        ]} 
+      />
+
+      {/* Breadcrumb UI */}
+      <section className="pt-28 pb-4 bg-background">
+        <div className="container mx-auto px-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">Accueil</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <ChevronRight className="w-4 h-4" />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/blog">Blog</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <ChevronRight className="w-4 h-4" />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage>{article.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </section>
+
       {/* Hero */}
-      <section className="pt-32 pb-12 bg-background">
+      <section className="pt-8 pb-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Link 
