@@ -81,17 +81,34 @@ export default function MentionsLegales() {
 
                 <section className="bg-card border border-border rounded-lg p-8">
                   <h2 className="text-2xl font-display font-bold text-card-foreground mb-4">
-                    4. Données personnelles
+                    4. Protection des données personnelles (RGPD)
                   </h2>
                   <p>
-                    Les informations recueillies via le formulaire de contact sont enregistrées 
-                    dans un fichier informatisé par BA Attitude pour la gestion des demandes 
-                    de devis et le suivi commercial.
+                    Conformément au Règlement Général sur la Protection des Données (RGPD) 
+                    et à la loi Informatique et Libertés, vous disposez des droits suivants 
+                    concernant vos données personnelles :
+                  </p>
+                  <ul className="list-disc list-inside mt-4 space-y-2">
+                    <li><strong className="text-card-foreground">Droit d'accès :</strong> obtenir la confirmation que des données vous concernant sont traitées</li>
+                    <li><strong className="text-card-foreground">Droit de rectification :</strong> demander la correction de données inexactes</li>
+                    <li><strong className="text-card-foreground">Droit à l'effacement :</strong> demander la suppression de vos données</li>
+                    <li><strong className="text-card-foreground">Droit à la portabilité :</strong> recevoir vos données dans un format structuré</li>
+                    <li><strong className="text-card-foreground">Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
+                    <li><strong className="text-card-foreground">Droit de limitation :</strong> demander la limitation du traitement</li>
+                  </ul>
+                  <p className="mt-4">
+                    <strong className="text-card-foreground">Responsable du traitement :</strong> BA Attitude<br />
+                    <strong className="text-card-foreground">Finalité du traitement :</strong> Gestion des demandes de devis, suivi commercial, envoi d'informations<br />
+                    <strong className="text-card-foreground">Base légale :</strong> Consentement et intérêt légitime<br />
+                    <strong className="text-card-foreground">Durée de conservation :</strong> 3 ans à compter du dernier contact
                   </p>
                   <p className="mt-4">
-                    Conformément à la loi « informatique et libertés », vous pouvez exercer 
-                    votre droit d'accès aux données vous concernant et les faire rectifier 
-                    en contactant : contact@baattitude.fr
+                    Pour exercer vos droits, contactez-nous à : <strong className="text-primary">contact@baattitude.fr</strong>
+                  </p>
+                  <p className="mt-4">
+                    Vous pouvez également introduire une réclamation auprès de la CNIL 
+                    (Commission Nationale de l'Informatique et des Libertés) : 
+                    <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">www.cnil.fr</a>
                   </p>
                 </section>
 

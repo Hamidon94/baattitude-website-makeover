@@ -1,9 +1,18 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowUpRight, ArrowRight, CheckCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import heroSalonProfessionnel from "@/assets/hero-salon-professionnel.jpg";
 import equipeMontageStand from "@/assets/equipe-montage-stand.jpg";
 import logistiqueEntrepot from "@/assets/logistique-entrepot.jpg";
@@ -76,8 +85,41 @@ export default function Services() {
 
   return (
     <Layout>
+      <SEOHead 
+        title="Nos Services | Prestations Techniques Événementielles | BA Attitude"
+        description="Découvrez nos services de prestations techniques pour salons professionnels : montage de stands, logistique événementielle, support technique, scénographie. Intervention France et international."
+        canonical="https://baattitude.fr/services"
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: "Accueil", url: "https://baattitude.fr" },
+          { name: "Nos Services", url: "https://baattitude.fr/services" }
+        ]} 
+      />
+
+      {/* Breadcrumb UI */}
+      <section className="pt-28 pb-4 bg-background">
+        <div className="container mx-auto px-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">Accueil</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <ChevronRight className="w-4 h-4" />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage>Nos Services</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </section>
+
       {/* Hero */}
-      <section ref={heroRef} className="pt-32 pb-20 bg-background relative overflow-hidden">
+      <section ref={heroRef} className="pt-8 pb-20 bg-background relative overflow-hidden">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         
         <motion.div style={{ opacity }} className="container mx-auto px-4 relative">
