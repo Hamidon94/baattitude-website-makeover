@@ -11,10 +11,10 @@ const services = [
 ];
 
 const zones = [
-  { name: "Paris & Île-de-France", href: "/zones/paris" },
-  { name: "Lyon & Rhône-Alpes", href: "/zones/lyon" },
-  { name: "Marseille & PACA", href: "/zones/marseille" },
-  { name: "Bordeaux", href: "/zones/bordeaux" },
+  { name: "Paris & Île-de-France", href: "/zones-intervention/paris" },
+  { name: "Lyon & Rhône-Alpes", href: "/zones-intervention/lyon" },
+  { name: "Marseille & PACA", href: "/zones-intervention/marseille" },
+  { name: "Bordeaux", href: "/zones-intervention/bordeaux" },
   { name: "International", href: "/international" },
 ];
 
@@ -52,13 +52,13 @@ export function Footer() {
               foires et événements B2B en France et à l'international.
             </p>
             <div className="flex items-center gap-4 mb-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/baattitude" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn BA ATTITUDE" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/baattitude.events" target="_blank" rel="noopener noreferrer" aria-label="Instagram BA ATTITUDE" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/baattitude.events" target="_blank" rel="noopener noreferrer" aria-label="Facebook BA ATTITUDE" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
             </div>

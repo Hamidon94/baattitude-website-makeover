@@ -3,8 +3,17 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, MapPin, Calendar, Users, CheckCircle2, Quote } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin, Calendar, Users, CheckCircle2, Quote, ChevronRight } from "lucide-react";
 import { FadeInSection, ParallaxImage, StaggerContainer, staggerItem } from "@/components/animations/ParallaxSection";
+import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import heroImage from "@/assets/hero-event.jpg";
 import serviceDecoration from "@/assets/service-decoration.jpg";
 import serviceScenography from "@/assets/service-scenography.jpg";
@@ -331,6 +340,48 @@ export default function RealisationDetail() {
 
   return (
     <Layout>
+      <SEOHead 
+        title={`${project.title} | Réalisations BA Attitude`}
+        description={project.description}
+        canonical={`https://baattitude.fr/realisations/${projectId}`}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: "Accueil", url: "https://baattitude.fr" },
+          { name: "Réalisations", url: "https://baattitude.fr/realisations" },
+          { name: project.title, url: `https://baattitude.fr/realisations/${projectId}` }
+        ]} 
+      />
+
+      {/* Breadcrumb UI */}
+      <section className="absolute top-24 left-0 right-0 z-10">
+        <div className="container mx-auto px-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/" className="text-white/70 hover:text-white">Accueil</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/realisations" className="text-white/70 hover:text-white">Réalisations</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <ChevronRight className="w-4 h-4 text-white/50" />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-white">{project.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </section>
+
       {/* Hero with Parallax */}
       <section ref={heroRef} className="relative h-[80vh] overflow-hidden">
         <motion.div 
