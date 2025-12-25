@@ -14,14 +14,14 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
-import heroImage from "@/assets/hero-event.jpg";
-import serviceDecoration from "@/assets/service-decoration.jpg";
-import serviceScenography from "@/assets/service-scenography.jpg";
-import serviceLocation from "@/assets/service-location.jpg";
-import serviceCorporate from "@/assets/service-corporate.jpg";
-import serviceLogistique from "@/assets/service-logistique.jpg";
-import serviceInternational from "@/assets/service-international.jpg";
-import aboutTeam from "@/assets/about-team.jpg";
+import realisationGalaDior from "@/assets/realisation-gala-dior.jpg";
+import realisationBvlgariLaunch from "@/assets/realisation-bvlgari-launch.jpg";
+import realisationGoogleConvention from "@/assets/realisation-google-convention.jpg";
+import realisationFendiDinner from "@/assets/realisation-fendi-dinner.jpg";
+import realisationAramcoSeminar from "@/assets/realisation-aramco-seminar.jpg";
+import realisationChaumetGala from "@/assets/realisation-chaumet-gala.jpg";
+import realisationG20Event from "@/assets/realisation-g20-event.jpg";
+import realisationDisneylandEvent from "@/assets/realisation-disneyland-event.jpg";
 
 const projectsData = [
   {
@@ -29,8 +29,8 @@ const projectsData = [
     title: "Gala Annuel DIOR",
     client: "DIOR",
     category: "Luxe",
-    image: heroImage,
-    gallery: [heroImage, serviceDecoration, serviceScenography],
+    image: realisationGalaDior,
+    gallery: [realisationGalaDior, realisationBvlgariLaunch, realisationFendiDinner],
     description: "Décoration complète pour le gala annuel de la maison DIOR",
     fullDescription: `Pour le gala annuel de la maison DIOR, nous avons conçu une expérience immersive exceptionnelle 
     mêlant élégance intemporelle et modernité. L'ensemble du décor a été pensé pour sublimer l'ADN de la marque 
@@ -67,8 +67,8 @@ const projectsData = [
     title: "Lancement Produit BVLGARI",
     client: "BVLGARI",
     category: "Luxe",
-    image: serviceDecoration,
-    gallery: [serviceDecoration, heroImage, serviceCorporate],
+    image: realisationBvlgariLaunch,
+    gallery: [realisationBvlgariLaunch, realisationGalaDior, realisationChaumetGala],
     description: "Scénographie immersive pour le lancement d'une nouvelle collection",
     fullDescription: `Le lancement de la nouvelle collection BVLGARI nécessitait un écrin à la hauteur 
     de l'excellence de la marque. Nous avons créé un univers où chaque pièce de la collection 
@@ -103,8 +103,8 @@ const projectsData = [
     title: "Convention Internationale GOOGLE",
     client: "GOOGLE",
     category: "Corporate",
-    image: serviceScenography,
-    gallery: [serviceScenography, serviceLogistique, aboutTeam],
+    image: realisationGoogleConvention,
+    gallery: [realisationGoogleConvention, realisationAramcoSeminar, realisationG20Event],
     description: "Aménagement et décoration de l'espace convention",
     fullDescription: `Pour la convention internationale GOOGLE, nous avons transformé un espace 
     de 5000m² en un environnement de travail innovant et inspirant. L'objectif était de 
@@ -136,8 +136,8 @@ const projectsData = [
     title: "Dîner Fashion Week",
     client: "FENDI",
     category: "Luxe",
-    image: serviceCorporate,
-    gallery: [serviceCorporate, serviceDecoration, heroImage],
+    image: realisationFendiDinner,
+    gallery: [realisationFendiDinner, realisationGalaDior, realisationChaumetGala],
     description: "Décoration du dîner VIP pendant la Fashion Week Paris",
     fullDescription: `Au cœur de la Fashion Week parisienne, nous avons créé un cadre intimiste 
     et raffiné pour le dîner exclusif FENDI. L'atmosphère feutrée et luxueuse a permis 
@@ -169,8 +169,8 @@ const projectsData = [
     title: "Séminaire ARAMCO",
     client: "ARAMCO",
     category: "Corporate",
-    image: serviceInternational,
-    gallery: [serviceInternational, serviceLogistique, serviceScenography],
+    image: realisationAramcoSeminar,
+    gallery: [realisationAramcoSeminar, realisationGoogleConvention, realisationG20Event],
     description: "Organisation complète du séminaire international",
     fullDescription: `Pour le séminaire international ARAMCO, nous avons déployé notre expertise 
     en coordination logistique internationale. Du transport au montage, chaque détail 
@@ -202,8 +202,8 @@ const projectsData = [
     title: "Soirée de Gala CHAUMET",
     client: "CHAUMET Paris",
     category: "Luxe",
-    image: serviceLocation,
-    gallery: [serviceLocation, serviceDecoration, heroImage],
+    image: realisationChaumetGala,
+    gallery: [realisationChaumetGala, realisationBvlgariLaunch, realisationGalaDior],
     description: "Mise en scène luxueuse pour la soirée anniversaire",
     fullDescription: `Pour célébrer l'anniversaire de la maison CHAUMET, nous avons créé un décor 
     féerique inspiré de l'héritage joaillier de la marque. Les éléments scénographiques 
@@ -235,8 +235,8 @@ const projectsData = [
     title: "Événement G20",
     client: "G20",
     category: "Événementiel",
-    image: serviceLogistique,
-    gallery: [serviceLogistique, serviceInternational, serviceScenography],
+    image: realisationG20Event,
+    gallery: [realisationG20Event, realisationAramcoSeminar, realisationGoogleConvention],
     description: "Logistique et décoration pour l'événement officiel",
     fullDescription: `L'événement G20 exigeait un niveau de rigueur et de professionnalisme 
     exceptionnel. Notre équipe a assuré la coordination logistique complète, 
@@ -268,8 +268,8 @@ const projectsData = [
     title: "Expérience DisneyLand",
     client: "DisneyLand Paris",
     category: "Événementiel",
-    image: aboutTeam,
-    gallery: [aboutTeam, serviceCorporate, serviceDecoration],
+    image: realisationDisneylandEvent,
+    gallery: [realisationDisneylandEvent, realisationGoogleConvention, realisationFendiDinner],
     description: "Décoration thématique pour un événement privé",
     fullDescription: `Pour DisneyLand Paris, nous avons créé une décoration thématique 
     immersive pour un événement corporate exclusif. L'objectif était de plonger 
