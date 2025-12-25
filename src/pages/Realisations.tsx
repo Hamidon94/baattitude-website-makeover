@@ -6,14 +6,14 @@ import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { ArrowUpRight, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ParallaxSection, FadeInSection } from "@/components/animations/ParallaxSection";
-import heroImage from "@/assets/hero-event.jpg";
-import serviceDecoration from "@/assets/service-decoration.jpg";
-import serviceScenography from "@/assets/service-scenography.jpg";
-import serviceLocation from "@/assets/service-location.jpg";
-import serviceCorporate from "@/assets/service-corporate.jpg";
-import serviceLogistique from "@/assets/service-logistique.jpg";
-import serviceInternational from "@/assets/service-international.jpg";
-import aboutTeam from "@/assets/about-team.jpg";
+import realisationGalaDior from "@/assets/realisation-gala-dior.jpg";
+import realisationBvlgariLaunch from "@/assets/realisation-bvlgari-launch.jpg";
+import realisationGoogleConvention from "@/assets/realisation-google-convention.jpg";
+import realisationFendiDinner from "@/assets/realisation-fendi-dinner.jpg";
+import realisationAramcoSeminar from "@/assets/realisation-aramco-seminar.jpg";
+import realisationChaumetGala from "@/assets/realisation-chaumet-gala.jpg";
+import realisationG20Event from "@/assets/realisation-g20-event.jpg";
+import realisationDisneylandEvent from "@/assets/realisation-disneyland-event.jpg";
 
 const categories = ["Tous", "Salons", "Corporate", "International"];
 
@@ -23,7 +23,7 @@ const projects = [
     title: "Maison & Objet Paris",
     client: "Agence DECO+",
     category: "Salons",
-    image: heroImage,
+    image: realisationGalaDior,
     description: "Montage et coordination de 15 stands pour l'agence DECO+ sur le salon Maison & Objet",
     year: "2024",
     location: "Paris Nord Villepinte",
@@ -34,7 +34,7 @@ const projects = [
     title: "SIAL Paris",
     client: "Groupe Alimentaire",
     category: "Salons",
-    image: serviceDecoration,
+    image: realisationBvlgariLaunch,
     description: "Installation complète d'un stand de 200m² avec espace dégustation",
     year: "2024",
     location: "Paris Nord Villepinte",
@@ -45,7 +45,7 @@ const projects = [
     title: "Convention GOOGLE",
     client: "GOOGLE France",
     category: "Corporate",
-    image: serviceScenography,
+    image: realisationGoogleConvention,
     description: "Support technique et logistique pour la convention annuelle",
     year: "2024",
     location: "Paris La Défense",
@@ -56,7 +56,7 @@ const projects = [
     title: "Sirha Lyon",
     client: "Fédération Restauration",
     category: "Salons",
-    image: serviceCorporate,
+    image: realisationFendiDinner,
     description: "Gestion de 8 espaces d'exposition sur le salon international de la restauration",
     year: "2023",
     location: "Eurexpo Lyon",
@@ -67,7 +67,7 @@ const projects = [
     title: "Arabian Travel Market",
     client: "Office Tourisme France",
     category: "International",
-    image: serviceInternational,
+    image: realisationAramcoSeminar,
     description: "Coordination du pavillon France sur le salon ATM à Dubaï",
     year: "2023",
     location: "Dubaï, UAE",
@@ -78,7 +78,7 @@ const projects = [
     title: "Première Vision",
     client: "Maison de Mode",
     category: "Salons",
-    image: serviceLocation,
+    image: realisationChaumetGala,
     description: "Installation et habillage du stand sur le salon du textile",
     year: "2023",
     location: "Paris Nord Villepinte",
@@ -89,7 +89,7 @@ const projects = [
     title: "ITB Berlin",
     client: "Cluster Tourisme",
     category: "International",
-    image: serviceLogistique,
+    image: realisationG20Event,
     description: "Support logistique pour le salon du tourisme à Berlin",
     year: "2023",
     location: "Berlin, Allemagne",
@@ -100,7 +100,7 @@ const projects = [
     title: "Global Industrie",
     client: "ETI Industrielle",
     category: "Salons",
-    image: aboutTeam,
+    image: realisationDisneylandEvent,
     description: "Montage d'un stand technique avec démonstrations machines",
     year: "2023",
     location: "Eurexpo Lyon",
@@ -200,7 +200,7 @@ export default function Realisations() {
             <FadeInSection>
               <div className="relative">
                 <img
-                  src={heroImage}
+                  src={realisationGalaDior}
                   alt="Projet en vedette"
                   className="w-full rounded-lg"
                 />
