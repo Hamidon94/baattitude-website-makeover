@@ -20,28 +20,44 @@ export function CookieBanner() {
   });
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
-      // Délai pour afficher la bannière après le chargement de la page
-      const timer = setTimeout(() => setIsVisible(true), 1500);
-      return () => clearTimeout(timer);
+    try {
+      const consent = localStorage.getItem("cookie-consent");
+      if (!consent) {
+        const timer = setTimeout(() => setIsVisible(true), 1500);
+        return () => clearTimeout(timer);
+      }
+    } catch (e) {
+      // localStorage not available (iframe restrictions)
+      console.warn("localStorage not available for cookie consent");
     }
   }, []);
 
   const acceptAll = () => {
     const allAccepted = { necessary: true, analytics: true, marketing: true };
-    localStorage.setItem("cookie-consent", JSON.stringify(allAccepted));
+    try {
+      localStorage.setItem("cookie-consent", JSON.stringify(allAccepted));
+    } catch (e) {
+      // Ignore storage errors
+    }
     setIsVisible(false);
   };
 
   const acceptNecessary = () => {
     const necessaryOnly = { necessary: true, analytics: false, marketing: false };
-    localStorage.setItem("cookie-consent", JSON.stringify(necessaryOnly));
+    try {
+      localStorage.setItem("cookie-consent", JSON.stringify(necessaryOnly));
+    } catch (e) {
+      // Ignore storage errors
+    }
     setIsVisible(false);
   };
 
   const savePreferences = () => {
-    localStorage.setItem("cookie-consent", JSON.stringify(preferences));
+    try {
+      localStorage.setItem("cookie-consent", JSON.stringify(preferences));
+    } catch (e) {
+      // Ignore storage errors
+    }
     setIsVisible(false);
     setShowSettings(false);
   };
