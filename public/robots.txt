@@ -18,6 +18,3 @@ Sitemap: https://baattitude.fr/sitemap.xml
 
 # Crawl-delay pour éviter la surcharge
 Crawl-delay: 1
-
-# Pages à ne pas indexer
-Disallow: /zones/*

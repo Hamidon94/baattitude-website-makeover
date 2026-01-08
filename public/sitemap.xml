@@ -140,37 +140,100 @@
   <!-- Pages Zones d'intervention -->
   <url>
     <loc>https://baattitude.fr/zones-intervention</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://baattitude.fr/zones-intervention/paris</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://baattitude.fr/zones/ile-de-france</loc>
+    <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://baattitude.fr/zones-intervention/lyon</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://baattitude.fr/zones/auvergne-rhone-alpes</loc>
+    <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://baattitude.fr/zones-intervention/marseille</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://baattitude.fr/zones/provence-alpes-cote-azur</loc>
+    <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://baattitude.fr/zones-intervention/bordeaux</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://baattitude.fr/zones/nouvelle-aquitaine</loc>
+    <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/hauts-de-france</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/grand-est</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/pays-de-la-loire</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/bretagne</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/occitanie</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/normandie</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/bourgogne-franche-comte</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/centre-val-de-loire</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://baattitude.fr/zones/corse</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <!-- Page International -->
@@ -234,7 +297,15 @@
   <!-- Mentions légales -->
   <url>
     <loc>https://baattitude.fr/mentions-legales</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Politique de confidentialité -->
+  <url>
+    <loc>https://baattitude.fr/politique-confidentialite</loc>
+    <lastmod>2025-01-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

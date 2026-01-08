@@ -11,11 +11,11 @@ const services = [
 ];
 
 const zones = [
-  { name: "Paris & Île-de-France", href: "/zones-intervention/paris" },
-  { name: "Lyon & Rhône-Alpes", href: "/zones-intervention/lyon" },
-  { name: "Marseille & PACA", href: "/zones-intervention/marseille" },
-  { name: "Bordeaux", href: "/zones-intervention/bordeaux" },
-  { name: "International", href: "/international" },
+  { name: "Paris & Île-de-France", href: "/zones/ile-de-france" },
+  { name: "Lyon & Rhône-Alpes", href: "/zones/auvergne-rhone-alpes" },
+  { name: "Marseille & PACA", href: "/zones/provence-alpes-cote-azur" },
+  { name: "Bordeaux", href: "/zones/nouvelle-aquitaine" },
+  { name: "Toutes les zones", href: "/zones-intervention" },
 ];
 
 const links = [
@@ -25,6 +25,7 @@ const links = [
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
   { name: "Mentions Légales", href: "/mentions-legales" },
+  { name: "Politique de confidentialité", href: "/politique-confidentialite" },
 ];
 
 export function Footer() {

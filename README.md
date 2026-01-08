@@ -282,6 +282,16 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.2 - 8 Janvier 2025 (AUDIT SEO)
+- ✅ Correction robots.txt : suppression `Disallow: /zones/*` (bloquant)
+- ✅ Titre homepage optimisé < 60 caractères
+- ✅ Schema Article ajouté sur tous les articles de blog
+- ✅ Page Politique de Confidentialité RGPD complète
+- ✅ Accessibilité : focus-visible sur tous les éléments
+- ✅ Sitemap mis à jour avec 13 régions + politique confidentialité
+- ✅ Liens footer corrigés vers pages régionales
+- ✅ Google Fonts retiré (optimisation performance)
+
 ### v3.1 - 26 Décembre 2024 (VÉRIFIÉ)
 - ✅ Vérification complète README vs implémentation
 - ✅ Toutes les pages documentées sont présentes
@@ -318,5 +328,5 @@ npm run preview
 
 ---
 
-*Dernière mise à jour : 26 décembre 2024*
-*Status : 100% COMPLET - Prêt pour production*
+*Dernière mise à jour : 8 janvier 2025*
+*Status : 100% COMPLET - Optimisé SEO - Prêt pour production*
