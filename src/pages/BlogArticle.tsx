@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Calendar, User, Clock, Share2, Linkedin, Twitter, Facebook, ChevronRight } from "lucide-react";
 import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -288,6 +289,14 @@ export default function BlogArticle() {
         title={`${article.title} | Blog BA Attitude`}
         description={article.excerpt}
         canonical={`https://baattitude.fr/blog/${articleId}`}
+      />
+      <ArticleSchema
+        title={article.title}
+        description={article.excerpt}
+        image={article.image}
+        author={article.author}
+        datePublished={article.date}
+        url={`https://baattitude.fr/blog/${articleId}`}
       />
       <BreadcrumbSchema 
         items={[
