@@ -102,14 +102,14 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button variant="hero" asChild className="group">
-              <Link to="/contact">
+              <Link to="/contact" aria-label="Demander un devis gratuit pour vos événements B2B">
                 Demander un Devis Gratuit
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </Link>
             </Button>
             <Button variant="hero-outline" asChild className="group">
-              <Link to="/realisations">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <Link to="/realisations" aria-label="Découvrir nos réalisations événementielles">
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" aria-hidden="true" />
                 Nos Réalisations
               </Link>
             </Button>
@@ -153,6 +153,8 @@ export function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        role="presentation"
+        aria-hidden="true"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

@@ -142,25 +142,27 @@ export function Header() {
             <a
               href="tel:+33601591920"
               className="flex items-center gap-2 text-sm text-card-foreground hover:text-primary transition-colors"
+              aria-label="Appeler BA Attitude au 06 01 59 19 20"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4" aria-hidden="true" />
               <span>06 01 59 19 20</span>
             </a>
             <Button variant="gold" asChild>
-              <Link to="/contact">Demander un Devis</Link>
+              <Link to="/contact" aria-label="Demander un devis gratuit">Demander un Devis</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-card-foreground hover:text-primary transition-colors"
-            aria-label="Toggle menu"
+            className="lg:hidden p-2 text-card-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6" aria-hidden="true" />
             )}
           </button>
         </div>

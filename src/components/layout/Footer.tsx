@@ -53,14 +53,14 @@ export function Footer() {
               foires et événements B2B en France et à l'international.
             </p>
             <div className="flex items-center gap-4 mb-4">
-              <a href="https://www.linkedin.com/company/baattitude" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn BA ATTITUDE" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
-                <Linkedin className="w-4 h-4" />
+              <a href="https://www.linkedin.com/company/baattitude" target="_blank" rel="noopener noreferrer" aria-label="Suivre BA ATTITUDE sur LinkedIn" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <Linkedin className="w-4 h-4" aria-hidden="true" />
               </a>
-              <a href="https://www.instagram.com/baattitude.events" target="_blank" rel="noopener noreferrer" aria-label="Instagram BA ATTITUDE" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
-                <Instagram className="w-4 h-4" />
+              <a href="https://www.instagram.com/baattitude.events" target="_blank" rel="noopener noreferrer" aria-label="Suivre BA ATTITUDE sur Instagram" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <Instagram className="w-4 h-4" aria-hidden="true" />
               </a>
-              <a href="https://www.facebook.com/baattitude.events" target="_blank" rel="noopener noreferrer" aria-label="Facebook BA ATTITUDE" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
-                <Facebook className="w-4 h-4" />
+              <a href="https://www.facebook.com/baattitude.events" target="_blank" rel="noopener noreferrer" aria-label="Suivre BA ATTITUDE sur Facebook" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <Facebook className="w-4 h-4" aria-hidden="true" />
               </a>
             </div>
             <div className="flex items-center gap-2">
