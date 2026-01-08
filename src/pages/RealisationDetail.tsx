@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, MapPin, Calendar, Users, CheckCircle2, Quote, ChevronRight } from "lucide-react";
 import { FadeInSection, ParallaxImage, StaggerContainer, staggerItem } from "@/components/animations/ParallaxSection";
 import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { EventSchema } from "@/components/seo/EventSchema";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -344,6 +345,17 @@ export default function RealisationDetail() {
         title={`${project.title} | Réalisations BA Attitude`}
         description={project.description}
         canonical={`https://baattitude.fr/realisations/${projectId}`}
+      />
+      <EventSchema
+        name={project.title}
+        description={project.fullDescription || project.description}
+        image={project.image}
+        startDate={project.year}
+        location={{
+          name: project.venue || project.location,
+          address: project.location
+        }}
+        url={`https://baattitude.fr/realisations/${projectId}`}
       />
       <BreadcrumbSchema 
         items={[

@@ -286,8 +286,10 @@ npm run preview
 - ✅ Correction robots.txt : suppression `Disallow: /zones/*` (bloquant)
 - ✅ Titre homepage optimisé < 60 caractères
 - ✅ Schema Article ajouté sur tous les articles de blog
+- ✅ Schema Event ajouté sur toutes les réalisations
 - ✅ Page Politique de Confidentialité RGPD complète
-- ✅ Accessibilité : focus-visible sur tous les éléments
+- ✅ Accessibilité : focus-visible + aria-labels complets
+- ✅ Amélioration contraste muted-foreground (65% → 70%)
 - ✅ Sitemap mis à jour avec 13 régions + politique confidentialité
 - ✅ Liens footer corrigés vers pages régionales
 - ✅ Google Fonts retiré (optimisation performance)

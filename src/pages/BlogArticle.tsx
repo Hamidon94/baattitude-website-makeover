@@ -434,14 +434,26 @@ export default function BlogArticle() {
                   Partager cet article
                 </span>
                 <div className="flex gap-3">
-                  <a href="#" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary transition-colors">
-                    <Linkedin className="w-4 h-4 text-muted-foreground" />
+                  <a 
+                    href="#" 
+                    aria-label="Partager sur LinkedIn"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <Linkedin className="w-4 h-4 text-muted-foreground" aria-hidden="true" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary transition-colors">
-                    <Twitter className="w-4 h-4 text-muted-foreground" />
+                  <a 
+                    href="#" 
+                    aria-label="Partager sur Twitter"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <Twitter className="w-4 h-4 text-muted-foreground" aria-hidden="true" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary transition-colors">
-                    <Facebook className="w-4 h-4 text-muted-foreground" />
+                  <a 
+                    href="#" 
+                    aria-label="Partager sur Facebook"
+                    className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <Facebook className="w-4 h-4 text-muted-foreground" aria-hidden="true" />
                   </a>
                 </div>
               </div>
