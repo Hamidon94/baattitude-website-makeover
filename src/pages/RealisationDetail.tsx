@@ -345,6 +345,9 @@ export default function RealisationDetail() {
         title={`${project.title} | Réalisations BA Attitude`}
         description={project.description}
         canonical={`https://baattitude.fr/realisations/${projectId}`}
+        ogUrl={`https://baattitude.fr/realisations/${projectId}`}
+        ogType="event"
+        ogImage={typeof project.image === 'string' ? project.image : "https://baattitude.fr/og-image.jpg"}
       />
       <EventSchema
         name={project.title}

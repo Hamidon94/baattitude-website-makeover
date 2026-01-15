@@ -16,7 +16,9 @@ const Index = () => {
         title="BA ATTITUDE | Prestations Techniques Événementielles - Salons Professionnels France"
         description="Spécialiste des prestations techniques pour salons professionnels, foires et événements B2B. Montage de stands, logistique, coordination terrain en France et à l'international. Devis gratuit sous 48h."
         canonical="https://baattitude.fr"
+        ogUrl="https://baattitude.fr"
         ogImage="https://baattitude.fr/og-image.jpg"
+        ogType="website"
       />
       <LocalBusinessSchema
         serviceType={[

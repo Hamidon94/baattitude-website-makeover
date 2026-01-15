@@ -38,6 +38,8 @@ export default function Contact() {
         title="Contact & Devis Gratuit | BA ATTITUDE - Prestataire Événementiel Paris"
         description="Demandez un devis gratuit pour vos salons professionnels et événements B2B. Réponse sous 24h. BA ATTITUDE, votre partenaire événementiel en Île-de-France."
         canonical="https://baattitude.fr/contact"
+        ogUrl="https://baattitude.fr/contact"
+        ogType="website"
       />
       <LocalBusinessSchema
         name="BA ATTITUDE"

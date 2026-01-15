@@ -161,12 +161,25 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   );
 }
 
+interface HreflangTag {
+  lang: string;
+  url: string;
+}
+
 interface SEOHeadProps {
   title: string;
   description: string;
   canonical?: string;
   noindex?: boolean;
   ogImage?: string;
+  ogType?: "website" | "article" | "event";
+  ogUrl?: string;
+  ogLocale?: string;
+  twitterCard?: "summary" | "summary_large_image";
+  hreflangTags?: HreflangTag[];
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
 }
 
 export function SEOHead({ 
@@ -174,7 +187,15 @@ export function SEOHead({
   description, 
   canonical,
   noindex = false,
-  ogImage = "https://baattitude.fr/og-image.jpg"
+  ogImage = "https://baattitude.fr/og-image.jpg",
+  ogType = "website",
+  ogUrl,
+  ogLocale = "fr_FR",
+  twitterCard = "summary_large_image",
+  hreflangTags,
+  publishedTime,
+  modifiedTime,
+  author
 }: SEOHeadProps) {
   return (
     <Helmet>
@@ -182,11 +203,37 @@ export function SEOHead({
       <meta name="description" content={description} />
       {canonical && <link rel="canonical" href={canonical} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={ogType} />
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      <meta property="og:locale" content={ogLocale} />
+      <meta property="og:site_name" content="BA ATTITUDE" />
+      
+      {/* Article specific */}
+      {ogType === "article" && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {ogType === "article" && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {ogType === "article" && author && (
+        <meta property="article:author" content={author} />
+      )}
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Hreflang tags for international SEO */}
+      {hreflangTags?.map((tag) => (
+        <link key={tag.lang} rel="alternate" hrefLang={tag.lang} href={tag.url} />
+      ))}
     </Helmet>
   );
 }

@@ -282,6 +282,15 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.4 - 15 Janvier 2025 (SEO INTERNATIONAL & OG DYNAMIQUES)
+- ✅ SEOHead amélioré : support hreflang, ogType, ogUrl, twitterCard, article metadata
+- ✅ Balises hreflang sur page International (fr, en, x-default)
+- ✅ Open Graph dynamiques sur TOUTES les pages avec og:url, og:type, og:site_name
+- ✅ Twitter Card large image sur toutes les pages
+- ✅ og:type="article" sur les articles de blog avec métadonnées auteur
+- ✅ og:type="event" sur les pages de réalisations
+- ✅ Images OG dynamiques liées aux images de chaque page
+
 ### v3.3 - 15 Janvier 2025 (AUDIT UX/SEO COMPLET)
 - ✅ International.tsx : tous textes anglais traduits en français
 - ✅ Skip link fonctionnel avec focus visible

@@ -89,6 +89,8 @@ export default function Services() {
         title="Nos Services | Prestations Techniques Événementielles | BA Attitude"
         description="Découvrez nos services de prestations techniques pour salons professionnels : montage de stands, logistique événementielle, support technique, scénographie. Intervention France et international."
         canonical="https://baattitude.fr/services"
+        ogUrl="https://baattitude.fr/services"
+        ogType="website"
       />
       <BreadcrumbSchema 
         items={[

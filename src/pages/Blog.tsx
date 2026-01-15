@@ -104,6 +104,8 @@ export default function Blog() {
         title="Blog Événementiel B2B | Conseils Salons Professionnels - BA ATTITUDE"
         description="Conseils d'experts, bonnes pratiques et actualités du secteur événementiel B2B. Guides pour réussir vos salons professionnels et événements corporate."
         canonical="https://baattitude.fr/blog"
+        ogUrl="https://baattitude.fr/blog"
+        ogType="website"
       />
       <BreadcrumbSchema items={blogBreadcrumbs} />
       
