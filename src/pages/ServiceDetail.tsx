@@ -545,10 +545,13 @@ export default function ServiceDetail() {
 
   return (
     <Layout>
-      <SEOHead
+      <SEOHead 
         title={service.metaTitle}
         description={service.metaDescription}
         canonical={`https://baattitude.fr/services/${resolvedId}`}
+        ogUrl={`https://baattitude.fr/services/${resolvedId}`}
+        ogType="website"
+        ogImage={typeof service.heroImage === 'string' ? service.heroImage : "https://baattitude.fr/og-image.jpg"}
       />
       <LocalBusinessSchema serviceType={[service.title]} />
       <FAQSchema faqs={service.faq} />

@@ -359,6 +359,8 @@ export default function ZonesIntervention() {
         title="Zones d'Intervention France & International | Montage Stands Salons | BA Attitude"
         description="BA Attitude intervient sur tous vos salons professionnels dans les 13 régions de France et à l'international. Montage, démontage de stands et logistique événementielle sur l'ensemble du territoire : Paris, Lyon, Marseille, Bordeaux, Lille, Nantes, Strasbourg, Toulouse."
         canonical="https://baattitude.fr/zones-intervention"
+        ogUrl="https://baattitude.fr/zones-intervention"
+        ogType="website"
       />
       <LocalBusinessSchema />
       <FAQSchema faqs={allFaqsForSchema} />

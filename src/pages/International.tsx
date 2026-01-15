@@ -84,6 +84,13 @@ export default function International() {
         title="Prestations Internationales | Salons Professionnels Monde - BA ATTITUDE"
         description="Interventions sur salons professionnels dans plus de 30 pays. Coordination locale, logistique internationale et formalités douanières. Partenaire événementiel mondial."
         canonical="https://baattitude.fr/international"
+        ogUrl="https://baattitude.fr/international"
+        ogType="website"
+        hreflangTags={[
+          { lang: "fr", url: "https://baattitude.fr/international" },
+          { lang: "en", url: "https://baattitude.fr/international" },
+          { lang: "x-default", url: "https://baattitude.fr/international" },
+        ]}
       />
       <BreadcrumbSchema items={internationalBreadcrumbs} />
       <FAQSchema faqs={internationalFaqs} />

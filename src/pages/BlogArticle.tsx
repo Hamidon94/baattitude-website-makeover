@@ -289,6 +289,10 @@ export default function BlogArticle() {
         title={`${article.title} | Blog BA Attitude`}
         description={article.excerpt}
         canonical={`https://baattitude.fr/blog/${articleId}`}
+        ogUrl={`https://baattitude.fr/blog/${articleId}`}
+        ogType="article"
+        ogImage={typeof article.image === 'string' ? article.image : "https://baattitude.fr/og-image.jpg"}
+        author={article.author}
       />
       <ArticleSchema
         title={article.title}

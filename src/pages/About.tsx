@@ -64,6 +64,8 @@ export default function About() {
         title="À Propos de BA ATTITUDE | Expert Prestations Techniques Événementielles"
         description="Découvrez BA ATTITUDE, votre partenaire technique pour les salons professionnels depuis 15 ans. Équipes qualifiées, intervention France entière, 500+ projets réalisés."
         canonical="https://baattitude.fr/a-propos"
+        ogUrl="https://baattitude.fr/a-propos"
+        ogType="website"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[

@@ -217,6 +217,8 @@ export default function ZoneIntervention() {
       <SEOHead
         title={`${zone.title} | BA Attitude`}
         description={zone.description}
+        ogUrl={`https://baattitude.fr/zone/${zoneId}`}
+        ogType="website"
         noindex={true}
       />
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">
