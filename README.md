@@ -282,6 +282,17 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.3 - 15 Janvier 2025 (AUDIT UX/SEO COMPLET)
+- ✅ International.tsx : tous textes anglais traduits en français
+- ✅ Skip link fonctionnel avec focus visible
+- ✅ Liens sociaux réels (Instagram, LinkedIn, Facebook BA Attitude)
+- ✅ Filtres blog fonctionnels avec état actif
+- ✅ aria-labels sur tous les select du formulaire
+- ✅ role="contentinfo" sur Footer, role="main" sur Layout
+- ✅ role="navigation" + aria-pressed sur filtres blog
+- ✅ Newsletter input avec aria-label + required
+- ✅ Contraste WCAG amélioré sur boutons filtres
+
 ### v3.2 - 8 Janvier 2025 (AUDIT SEO)
 - ✅ Correction robots.txt : suppression `Disallow: /zones/*` (bloquant)
 - ✅ Titre homepage optimisé < 60 caractères
@@ -330,5 +341,5 @@ npm run preview
 
 ---
 
-*Dernière mise à jour : 8 janvier 2025*
-*Status : 100% COMPLET - Optimisé SEO - Prêt pour production*
+*Dernière mise à jour : 15 janvier 2025*
+*Status : 100% COMPLET - Optimisé SEO/UX - Prêt pour production*

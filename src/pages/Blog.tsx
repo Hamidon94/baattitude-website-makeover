@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
@@ -88,8 +89,14 @@ const blogBreadcrumbs = [
 ];
 
 export default function Blog() {
-  const featuredArticle = articles.find(a => a.featured);
-  const regularArticles = articles.filter(a => !a.featured);
+  const [activeCategory, setActiveCategory] = useState("Tous");
+  
+  const filteredArticles = activeCategory === "Tous" 
+    ? articles 
+    : articles.filter(a => a.category === activeCategory);
+  
+  const featuredArticle = filteredArticles.find(a => a.featured);
+  const regularArticles = filteredArticles.filter(a => !a.featured);
 
   return (
     <Layout>
@@ -134,13 +141,19 @@ export default function Blog() {
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-card border-y border-border sticky top-20 z-30">
+      <section className="py-8 bg-card border-y border-border sticky top-20 z-30" role="navigation" aria-label="Filtres par catégorie">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-4 flex-wrap">
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-muted border border-border text-muted-foreground hover:border-primary/50 hover:text-card-foreground"
+                onClick={() => setActiveCategory(category)}
+                aria-pressed={activeCategory === category}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeCategory === category
+                    ? "bg-primary text-primary-foreground border border-primary"
+                    : "bg-muted border border-border text-muted-foreground hover:border-primary/50 hover:text-card-foreground"
+                }`}
               >
                 {category}
               </button>
@@ -290,6 +303,8 @@ export default function Blog() {
               <input
                 type="email"
                 placeholder="Votre email"
+                aria-label="Adresse email pour inscription à la newsletter"
+                required
                 className="px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none flex-1 max-w-md"
               />
               <Button variant="gold">

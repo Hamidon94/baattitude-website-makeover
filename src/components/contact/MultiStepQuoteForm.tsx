@@ -355,6 +355,7 @@ export function MultiStepQuoteForm() {
                       name="country"
                       value={formData.country}
                       onChange={handleChange}
+                      aria-label="Sélectionner le pays de l'événement"
                       className="flex h-11 w-full rounded-lg border border-border bg-muted px-4 py-2 text-card-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all"
                     >
                       <option value="France">France</option>
@@ -410,6 +411,7 @@ export function MultiStepQuoteForm() {
                       name="standSize"
                       value={formData.standSize}
                       onChange={handleChange}
+                      aria-label="Sélectionner la surface du stand"
                       className="flex h-11 w-full rounded-lg border border-border bg-muted px-4 py-2 text-card-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all"
                     >
                       {standSizes.map((size) => (
@@ -425,6 +427,7 @@ export function MultiStepQuoteForm() {
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
+                      aria-label="Sélectionner le budget estimé"
                       className="flex h-11 w-full rounded-lg border border-border bg-muted px-4 py-2 text-card-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all"
                     >
                       {budgetRanges.map((range) => (

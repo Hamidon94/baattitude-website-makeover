@@ -108,7 +108,7 @@ export default function International() {
             >
               <Globe className="w-5 h-5 text-primary" />
               <span className="text-sm font-medium text-primary uppercase tracking-widest">
-                International Services
+                Services Internationaux
               </span>
             </motion.div>
             <motion.h1
@@ -179,7 +179,7 @@ export default function International() {
         <div className="container mx-auto px-4">
           <FadeInSection className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-medium text-primary uppercase tracking-widest mb-4 block">
-              Why Choose Us
+              Nos Atouts
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-card-foreground">
               Pourquoi nous faire <span className="text-gradient-gold">confiance</span> ?
@@ -212,7 +212,7 @@ export default function International() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeInSection>
               <span className="text-sm font-medium text-primary uppercase tracking-widest mb-4 block">
-                Our Services
+                Nos Services
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-card-foreground mb-6">
                 Services inclus dans nos <span className="text-gradient-gold">prestations internationales</span>
@@ -300,14 +300,14 @@ export default function International() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="hero" size="lg" asChild>
                 <Link to="/contact">
-                  Request a Quote
+                  Demander un devis
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:+33601591920">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Contact an Expert
+                <a href="tel:+33601591920" aria-label="Appeler BA Attitude au 06 01 59 19 20">
+                  <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
+                  Contacter un expert
                 </a>
               </Button>
             </div>

@@ -19,15 +19,26 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Skip Link for accessibility */}
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Aller au contenu principal
+      </a>
+      
       <Header />
       <AnimatePresence mode="wait">
         <motion.main 
+          id="main-content"
           key={location.pathname}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex-1"
+          role="main"
+          tabIndex={-1}
         >
           {children}
         </motion.main>

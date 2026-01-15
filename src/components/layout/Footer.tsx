@@ -30,7 +30,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="bg-muted border-t border-border">
+    <footer className="bg-muted border-t border-border" role="contentinfo">
       <div className="container mx-auto px-4 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}

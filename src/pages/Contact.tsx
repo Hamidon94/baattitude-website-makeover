@@ -184,28 +184,31 @@ export default function Contact() {
                 <h3 className="font-semibold text-card-foreground mb-4">Suivez-nous</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/baattitude.events/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Suivez BA Attitude sur Instagram"
                     className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors"
                   >
-                    <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                    <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary" aria-hidden="true" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/ba-attitude/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Suivez BA Attitude sur LinkedIn"
                     className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors"
                   >
-                    <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                    <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" aria-hidden="true" />
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/baattitude.events/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Suivez BA Attitude sur Facebook"
                     className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors"
                   >
-                    <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                    <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary" aria-hidden="true" />
                   </a>
                 </div>
               </div>
