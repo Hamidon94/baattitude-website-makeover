@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { MapPin, Phone, Mail, Clock, Instagram, Linkedin, Facebook } from "lucide-react";
+import { LazyMap } from "@/components/ui/lazy-map";
 import { ContactCTA } from "@/components/contact/ContactCTA";
 import { MultiStepQuoteForm } from "@/components/contact/MultiStepQuoteForm";
 import {
@@ -252,17 +253,12 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Lazy Loaded Map */}
       <section className="h-[400px] relative">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.7!2d2.6!3d48.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDQ4JzAwLjAiTiAywrAzNicwMC4wIkU!5e0!3m2!1sfr!2sfr!4v1234567890"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Localisation BA Attitude"
+        <LazyMap
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.5!2d2.6061!3d48.8034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6014f1e3c2c9d%3A0x8c9a07e63a7c5f1b!2s16%20Rue%20des%20Pendants%2C%2077340%20Pontault-Combault!5e0!3m2!1sfr!2sfr!4v1704880000000"
+          title="Localisation BA Attitude - 16 Rue des Pendants, 77340 Pontault-Combault"
+          className="h-full w-full"
         />
       </section>
     </Layout>

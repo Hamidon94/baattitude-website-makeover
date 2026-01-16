@@ -634,31 +634,72 @@ export function MultiStepQuoteForm() {
                 </div>
               </div>
 
-              {/* Summary */}
-              <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                <h4 className="font-medium text-card-foreground mb-3">Récapitulatif de votre demande</h4>
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div>
-                    <span className="text-muted-foreground">Type de projet:</span>
-                    <span className="ml-2 text-card-foreground font-medium">{getProjectTypeLabel()}</span>
+              {/* Enhanced Summary */}
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20">
+                <h4 className="font-display font-bold text-card-foreground mb-4 flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  Récapitulatif de votre demande
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border">
+                    <Building2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-muted-foreground block text-xs uppercase tracking-wide mb-1">Type de projet</span>
+                      <span className="text-card-foreground font-medium">{getProjectTypeLabel()}</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-muted-foreground">Lieu:</span>
-                    <span className="ml-2 text-card-foreground font-medium">{formData.location}, {formData.country}</span>
+                  <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border">
+                    <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-muted-foreground block text-xs uppercase tracking-wide mb-1">Lieu</span>
+                      <span className="text-card-foreground font-medium">{formData.location}, {formData.country}</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-muted-foreground">Date:</span>
-                    <span className="ml-2 text-card-foreground font-medium">
-                      {formData.eventDate ? new Date(formData.eventDate).toLocaleDateString('fr-FR') : '-'}
-                    </span>
+                  <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border">
+                    <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-muted-foreground block text-xs uppercase tracking-wide mb-1">Date de l'événement</span>
+                      <span className="text-card-foreground font-medium">
+                        {formData.eventDate ? new Date(formData.eventDate).toLocaleDateString('fr-FR', { 
+                          weekday: 'long', 
+                          year: 'numeric', 
+                          month: 'long', 
+                          day: 'numeric' 
+                        }) : '-'}
+                      </span>
+                    </div>
                   </div>
                   {formData.venue && (
-                    <div>
-                      <span className="text-muted-foreground">Site:</span>
-                      <span className="ml-2 text-card-foreground font-medium">{formData.venue}</span>
+                    <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border">
+                      <Building2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-muted-foreground block text-xs uppercase tracking-wide mb-1">Site / Parc</span>
+                        <span className="text-card-foreground font-medium">{formData.venue}</span>
+                      </div>
+                    </div>
+                  )}
+                  {formData.standSize && (
+                    <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border">
+                      <FileText className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-muted-foreground block text-xs uppercase tracking-wide mb-1">Surface</span>
+                        <span className="text-card-foreground font-medium">{standSizes.find(s => s.value === formData.standSize)?.label || formData.standSize}</span>
+                      </div>
+                    </div>
+                  )}
+                  {formData.budget && (
+                    <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border">
+                      <Briefcase className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-muted-foreground block text-xs uppercase tracking-wide mb-1">Budget</span>
+                        <span className="text-card-foreground font-medium">{budgetRanges.find(b => b.value === formData.budget)?.label || formData.budget}</span>
+                      </div>
                     </div>
                   )}
                 </div>
+                <p className="text-xs text-muted-foreground mt-4 text-center">
+                  ✓ Vérifiez ces informations avant d'envoyer votre demande
+                </p>
               </div>
             </motion.div>
           )}

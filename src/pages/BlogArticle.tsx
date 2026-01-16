@@ -486,6 +486,39 @@ export default function BlogArticle() {
               </Link>
             ))}
           </div>
+          
+          {/* Internal links to services */}
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground mb-4">
+              Découvrez nos services en lien avec cet article :
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link 
+                to="/services/montage-demontage"
+                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:border-primary hover:text-primary transition-colors"
+              >
+                Montage & Démontage
+              </Link>
+              <Link 
+                to="/services/logistique"
+                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:border-primary hover:text-primary transition-colors"
+              >
+                Logistique
+              </Link>
+              <Link 
+                to="/services/scenographie"
+                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:border-primary hover:text-primary transition-colors"
+              >
+                Scénographie
+              </Link>
+              <Link 
+                to="/zones-intervention"
+                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:border-primary hover:text-primary transition-colors"
+              >
+                Zones d'intervention
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

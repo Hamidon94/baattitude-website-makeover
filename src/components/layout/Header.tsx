@@ -1,9 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+// Prefetch critical routes for better performance
+const prefetchRoutes = ["/contact", "/services", "/realisations"];
+const prefetchedRoutes = new Set<string>();
+
+function prefetchRoute(path: string) {
+  if (prefetchedRoutes.has(path)) return;
+  prefetchedRoutes.add(path);
+  
+  // Create a link element to trigger prefetch
+  const link = document.createElement("link");
+  link.rel = "prefetch";
+  link.href = path;
+  document.head.appendChild(link);
+}
 
 const services = [
   { name: "Salons Professionnels", href: "/services/salons-professionnels" },
@@ -30,6 +45,19 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
+
+  // Prefetch critical routes after initial load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      prefetchRoutes.forEach(prefetchRoute);
+    }, 2000); // Wait 2s after page load
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleLinkHover = useCallback((href: string) => {
+    prefetchRoute(href);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,6 +113,7 @@ export function Header() {
               >
                 <Link
                   to={item.href}
+                  onMouseEnter={() => handleLinkHover(item.href)}
                   className={cn(
                     "relative text-sm font-medium tracking-wide transition-colors duration-300 py-2 flex items-center gap-1",
                     location.pathname === item.href || (item.hasDropdown && location.pathname.startsWith("/services"))
@@ -93,11 +122,12 @@ export function Header() {
                   )}
                 >
                   {item.name}
-                  {item.hasDropdown && <ChevronDown className="w-3 h-3" />}
+                  {item.hasDropdown && <ChevronDown className="w-3 h-3" aria-hidden="true" />}
                   {(location.pathname === item.href || (item.hasDropdown && location.pathname.startsWith("/services"))) && (
                     <motion.div
                       layoutId="activeNav"
                       className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-gold"
+                      aria-hidden="true"
                     />
                   )}
                 </Link>
@@ -111,12 +141,16 @@ export function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl overflow-hidden"
+                        role="menu"
+                        aria-label="Sous-menu Services"
                       >
                         {services.map((service) => (
                           <Link
                             key={service.href}
                             to={service.href}
+                            onMouseEnter={() => handleLinkHover(service.href)}
                             className="block px-4 py-3 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                            role="menuitem"
                           >
                             {service.name}
                           </Link>
