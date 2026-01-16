@@ -52,10 +52,12 @@ export function StatsSection() {
 
   return (
     <section ref={sectionRef} className="py-20 bg-card border-y border-border relative overflow-hidden">
-      {/* Animated background gradient */}
+      {/* Animated background gradient - Decorative */}
       <motion.div 
         style={{ x: backgroundX }}
         className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 pointer-events-none"
+        aria-hidden="true"
+        role="presentation"
       />
       
       <div className="container mx-auto px-4 relative z-10">

@@ -56,8 +56,8 @@ const services = [
 export function ServicesSection() {
   return (
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
+      {/* Background Elements - Decorative */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" aria-hidden="true" role="presentation" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
