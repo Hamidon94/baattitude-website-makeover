@@ -16,10 +16,12 @@ export function CTASection() {
 
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 bg-muted relative overflow-hidden">
-      {/* Animated Decorative Elements */}
+      {/* Animated Decorative Elements - Hidden from screen readers */}
       <motion.div 
         style={{ y: backgroundY }}
         className="absolute inset-0 opacity-30"
+        aria-hidden="true"
+        role="presentation"
       >
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
       </motion.div>
@@ -31,6 +33,8 @@ export function CTASection() {
         }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+        aria-hidden="true"
+        role="presentation"
       />
       <motion.div 
         animate={{ 
@@ -39,6 +43,8 @@ export function CTASection() {
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -bottom-20 -left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl"
+        aria-hidden="true"
+        role="presentation"
       />
       
       <div className="container mx-auto px-4 relative">
@@ -110,16 +116,18 @@ export function CTASection() {
               href="tel:+33601591920"
               whileHover={{ scale: 1.05, color: "hsl(var(--primary))" }}
               className="flex items-center gap-2 text-muted-foreground transition-colors"
+              aria-label="Appeler BA Attitude au 06 01 59 19 20"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4" aria-hidden="true" />
               <span>06 01 59 19 20</span>
             </motion.a>
             <motion.a
               href="mailto:contact@baattitude.fr"
               whileHover={{ scale: 1.05, color: "hsl(var(--primary))" }}
               className="flex items-center gap-2 text-muted-foreground transition-colors"
+              aria-label="Envoyer un email à BA Attitude"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4" aria-hidden="true" />
               <span>contact@baattitude.fr</span>
             </motion.a>
           </motion.div>

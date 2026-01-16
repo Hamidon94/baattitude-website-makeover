@@ -282,6 +282,15 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.6 - 16 Janvier 2025 (PWA & SITEMAP IMAGES)
+- ✅ PWA Manifest : manifest.json avec icônes, couleurs, orientation
+- ✅ Sitemap Images : sitemap-images.xml pour Google Images SEO
+- ✅ robots.txt : déclaration des 2 sitemaps
+- ✅ Éléments décoratifs StatsSection : aria-hidden
+- ✅ Éléments décoratifs CTASection : aria-hidden + role="presentation"
+- ✅ aria-labels sur liens téléphone/email CTA
+- ✅ index.html : lien vers manifest.json
+
 ### v3.5 - 16 Janvier 2025 (PERFORMANCE & ACCESSIBILITÉ)
 - ✅ LazyMap : chargement différé Google Maps avec IntersectionObserver
 - ✅ TrailingSlashRedirect : normalisation URLs (suppression trailing slashes)
