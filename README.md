@@ -282,6 +282,17 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.5 - 16 Janvier 2025 (PERFORMANCE & ACCESSIBILITÉ)
+- ✅ LazyMap : chargement différé Google Maps avec IntersectionObserver
+- ✅ TrailingSlashRedirect : normalisation URLs (suppression trailing slashes)
+- ✅ Prefetch liens critiques : /contact, /services, /realisations chargés au survol
+- ✅ Maillage interne blog : liens vers services dans chaque article
+- ✅ Récapitulatif formulaire amélioré : affichage complet avant envoi
+- ✅ Page 404 enrichie : liens populaires + SEOHead
+- ✅ Éléments décoratifs : aria-hidden + role="presentation"
+- ✅ Dropdown services : role="menu" + role="menuitem" ARIA
+- ✅ Marquee clients : aria-label pour accessibilité
+
 ### v3.4 - 15 Janvier 2025 (SEO INTERNATIONAL & OG DYNAMIQUES)
 - ✅ SEOHead amélioré : support hreflang, ogType, ogUrl, twitterCard, article metadata
 - ✅ Balises hreflang sur page International (fr, en, x-default)

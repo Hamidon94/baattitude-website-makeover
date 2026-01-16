@@ -29,9 +29,9 @@ export function ClientsSection() {
         </motion.div>
 
         {/* Clients Marquee */}
-        <div className="relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-muted to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-muted to-transparent z-10" />
+        <div className="relative overflow-hidden" role="marquee" aria-label="Nos clients de référence">
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-muted to-transparent z-10" aria-hidden="true" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-muted to-transparent z-10" aria-hidden="true" />
           
           <motion.div
             initial={{ opacity: 0 }}

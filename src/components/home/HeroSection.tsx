@@ -33,14 +33,16 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
       </motion.div>
 
-      {/* Animated Decorative Elements */}
+      {/* Animated Decorative Elements - aria-hidden for accessibility */}
       <motion.div 
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.2, 0.1]
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" 
+        className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+        aria-hidden="true"
+        role="presentation"
       />
       <motion.div 
         animate={{ 
@@ -48,7 +50,9 @@ export function HeroSection() {
           opacity: [0.05, 0.15, 0.05]
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" 
+        className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+        aria-hidden="true"
+        role="presentation"
       />
 
       {/* Content with Parallax */}
