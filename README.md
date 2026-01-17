@@ -85,39 +85,66 @@ Site web vitrine pour **BA Attitude**, spécialiste des prestations techniques e
 - `.card-hover` - Animation hover pour cards
 - `.shimmer-effect` - Effet brillance
 
-### 5. Images Générées (20+ images uniques)
+### 5. Images Générées (35+ images uniques - SANS DOUBLONS)
 
-#### Images Services
-| Image | Fichier | Usage |
-|-------|---------|-------|
-| Hero Salon | `hero-salon-professionnel.jpg` | Page Services, Accueil |
-| Équipe Montage | `equipe-montage-stand.jpg` | Service Montage |
-| Logistique | `logistique-entrepot.jpg` | Service Logistique |
-| Scénographie | `stand-scenographie-premium.jpg` | Service Scénographie |
-| Support Technique | `support-technique-regie.jpg` | Service Support |
-| Conférence | `conference-internationale.jpg` | Service International |
+#### Images Hero & Principales
+| Image | Fichier | Usage UNIQUE |
+|-------|---------|--------------|
+| Hero Panoramique | `hero-salon-panoramique.jpg` | **Accueil - Hero uniquement** |
+| Zones Intervention | `zones-intervention-france.jpg` | **Zones d'intervention - Hero** |
+| Blog Editorial | `blog-header-editorial.jpg` | **Blog - Article Featured** |
 
-#### Images Blog
-| Image | Fichier | Usage |
-|-------|---------|-------|
-| Salon Vue Ensemble | `salon-professionnel-vue-ensemble.jpg` | Article Blog |
-| Montage Stand Paris | `montage-stand-salon-paris.jpg` | Article Blog |
-| Logistique Chargement | `logistique-evenementielle-chargement.jpg` | Article Blog |
-| Support Événement | `support-technique-evenement.jpg` | Article Blog |
-| Scénographie Premium | `scenographie-stand-premium.jpg` | Article Blog |
-| Conférence Intl | `evenement-international-conference.jpg` | Article Blog |
+#### Images Services Section (Accueil)
+| Image | Fichier | Usage UNIQUE |
+|-------|---------|--------------|
+| Salon Professionnel | `salon-professionnel-vue-ensemble.jpg` | **ServicesSection - Salons** |
+| Montage Stand Paris | `montage-stand-salon-paris.jpg` | **ServicesSection - Montage** |
+| Support Technique | `support-technique-evenement.jpg` | **ServicesSection - Support** |
+| Logistique Chargement | `logistique-evenementielle-chargement.jpg` | **ServicesSection - Logistique** |
+| Scénographie Premium | `scenographie-stand-premium.jpg` | **ServicesSection - Scénographie** |
+| Conférence International | `evenement-international-conference.jpg` | **ServicesSection - International** |
 
-#### Images Réalisations (NOUVELLES - 25/12/2024)
-| Image | Fichier | Usage |
-|-------|---------|-------|
-| Gala DIOR | `realisation-gala-dior.jpg` | Réalisation luxe |
-| Lancement BVLGARI | `realisation-bvlgari-launch.jpg` | Réalisation luxe |
-| Convention GOOGLE | `realisation-google-convention.jpg` | Réalisation corporate |
-| Dîner FENDI | `realisation-fendi-dinner.jpg` | Réalisation luxe |
-| Séminaire ARAMCO | `realisation-aramco-seminar.jpg` | Réalisation corporate |
-| Gala CHAUMET | `realisation-chaumet-gala.jpg` | Réalisation luxe |
-| Événement G20 | `realisation-g20-event.jpg` | Réalisation événementiel |
-| DisneyLand Event | `realisation-disneyland-event.jpg` | Réalisation événementiel |
+#### Images Page Services
+| Image | Fichier | Usage UNIQUE |
+|-------|---------|--------------|
+| Hero Salon Pro | `hero-salon-professionnel.jpg` | **Services - Salons Pro** |
+| Équipe Montage | `equipe-montage-stand.jpg` | **Services - Montage + About** |
+| Logistique Entrepot | `logistique-entrepot.jpg` | **Services - Logistique** |
+| Stand Scénographie | `stand-scenographie-premium.jpg` | **Services - Scénographie + About** |
+| Support Régie | `support-technique-regie.jpg` | **Services - Support Tech** |
+| Conférence Intl | `conference-internationale.jpg` | **Services - International** |
+
+#### Images Blog (UNIQUES - 17/01/2025)
+| Image | Fichier | Usage UNIQUE |
+|-------|---------|--------------|
+| Stand Design | `blog-stand-design.jpg` | **Article 1 - Organisation** |
+| Logistique Warehouse | `blog-logistique-warehouse.jpg` | **Article 6 - Sécurité** |
+| Support Technique | `blog-support-technique.jpg` | **Article 5 - Choisir prestataire** |
+| International Event | `blog-international-event.jpg` | **Article 2 - International** |
+| Service Decoration | `service-decoration.jpg` | **Article 3 - Montage** |
+| Service Scenography | `service-scenography.jpg` | **Article 4 - Tendances** |
+
+#### Images Réalisations (8 images uniques)
+| Image | Fichier | Usage UNIQUE |
+|-------|---------|--------------|
+| Gala DIOR | `realisation-gala-dior.jpg` | Réalisation 1 |
+| Lancement BVLGARI | `realisation-bvlgari-launch.jpg` | Réalisation 2 |
+| Convention GOOGLE | `realisation-google-convention.jpg` | Réalisation 3 |
+| Dîner FENDI | `realisation-fendi-dinner.jpg` | Réalisation 4 |
+| Séminaire ARAMCO | `realisation-aramco-seminar.jpg` | Réalisation 5 |
+| Gala CHAUMET | `realisation-chaumet-gala.jpg` | Réalisation 6 |
+| Événement G20 | `realisation-g20-event.jpg` | Réalisation 7 |
+| DisneyLand Event | `realisation-disneyland-event.jpg` | Réalisation 8 |
+
+#### Images Témoignages (6 images uniques)
+| Image | Fichier | Usage UNIQUE |
+|-------|---------|--------------|
+| Marie Dubois | `testimonial-marie-dubois.jpg` | Témoignage 1 |
+| Philippe Martin | `testimonial-philippe-martin.jpg` | Témoignage 2 |
+| Sophie Laurent | `testimonial-sophie-laurent.jpg` | Témoignage 3 |
+| Antoine Bernard | `testimonial-antoine-bernard.jpg` | Témoignage 4 |
+| Caroline Petit | `testimonial-caroline-petit.jpg` | Témoignage 5 |
+| Julien Moreau | `testimonial-julien-moreau.jpg` | Témoignage 6 |
 
 ### 6. SEO Technique
 
@@ -282,11 +309,19 @@ npm run preview
 
 ## 📋 Changelog
 
-### v3.7 - 17 Janvier 2025 (PWA SERVICE WORKER & IMAGES UNIQUES)
+### v3.8 - 17 Janvier 2025 (AUDIT IMAGES - ZÉRO DOUBLON)
+- ✅ **RÈGLE D'OR APPLIQUÉE** : Chaque image utilisée sur UNE SEULE page
+- ✅ Nouvelle image hero panoramique `hero-salon-panoramique.jpg` (Accueil)
+- ✅ Nouvelle image `zones-intervention-france.jpg` (Zones d'intervention)
+- ✅ Nouvelle image `blog-header-editorial.jpg` (Blog featured)
+- ✅ Nouvelles images blog uniques : `blog-stand-design.jpg`, `blog-logistique-warehouse.jpg`, `blog-support-technique.jpg`, `blog-international-event.jpg`
+- ✅ Correction About.tsx : utilise `equipe-montage-stand.jpg` et `stand-scenographie-premium.jpg`
+- ✅ Sitemap.xml mis à jour avec date 2025-01-17
+- ✅ README mis à jour avec mapping complet des 35+ images
+
+### v3.7 - 17 Janvier 2025 (PWA SERVICE WORKER)
 - ✅ Service Worker PWA : cache offline, stratégie network-first
-- ✅ Nouvelle image hero panoramique unique (distinct de Salons Professionnels)
 - ✅ Manifest.json amélioré avec id, scope, lang fr-FR
-- ✅ Règle d'or images : aucun doublon entre hero et services
 - ✅ Service Worker avec gestion push notifications (future-ready)
 
 ### v3.6 - 16 Janvier 2025 (PWA & SITEMAP IMAGES)

@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ParallaxSection, FadeInSection } from "@/components/animations/ParallaxSection";
 import { SEOHead, LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import aboutTeam from "@/assets/about-team.jpg";
-import montageStand from "@/assets/montage-stand-salon-paris.jpg";
-import scenographie from "@/assets/scenographie-stand-premium.jpg";
+import equipeMontageStand from "@/assets/equipe-montage-stand.jpg";
+import standScenographiePremium from "@/assets/stand-scenographie-premium.jpg";
 
 const values = [
   {
@@ -166,7 +166,7 @@ export default function About() {
             <FadeInSection>
               <div className="aspect-video rounded-lg overflow-hidden border border-border">
                 <img
-                  src={montageStand}
+                  src={equipeMontageStand}
                   alt="Équipe de monteurs de stands BA ATTITUDE en action sur un salon professionnel à Paris"
                   className="w-full h-full object-cover"
                 />
@@ -178,7 +178,7 @@ export default function About() {
             <FadeInSection delay={0.2}>
               <div className="aspect-video rounded-lg overflow-hidden border border-border">
                 <img
-                  src={scenographie}
+                  src={standScenographiePremium}
                   alt="Stand scénographique premium réalisé par BA ATTITUDE avec éclairage design"
                   className="w-full h-full object-cover"
                 />

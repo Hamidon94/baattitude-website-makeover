@@ -6,8 +6,8 @@ import { ArrowRight, MapPin, CheckCircle, Globe, Truck, Clock, Users, Phone, Bui
 import { FadeInSection, StaggerContainer, staggerItem } from "@/components/animations/ParallaxSection";
 import { LocalBusinessSchema, FAQSchema, SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import heroImage from "@/assets/hero-event.jpg";
-import salonProImage from "@/assets/salon-professionnel-vue-ensemble.jpg";
+import zonesInterventionFrance from "@/assets/zones-intervention-france.jpg";
+import salonProImage from "@/assets/hero-salon-professionnel.jpg";
 
 // Données des régions avec leurs spécificités
 const regions = [
@@ -373,7 +373,7 @@ export default function ZonesIntervention() {
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src={zonesInterventionFrance}
             alt="Intervention montage stands salons professionnels France"
             className="w-full h-full object-cover opacity-15"
           />
