@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { ArrowRight, Calendar, User, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-event.jpg";
+import blogHeaderEditorial from "@/assets/blog-header-editorial.jpg";
 import serviceDecoration from "@/assets/service-decoration.jpg";
 import serviceScenography from "@/assets/service-scenography.jpg";
 import serviceLogistique from "@/assets/service-logistique.jpg";
@@ -19,7 +19,7 @@ const articles = [
     id: "organisation-technique-salon-professionnel",
     title: "Organisation technique d'un salon professionnel : le guide complet",
     excerpt: "De la planification au démontage, découvrez les étapes clés pour réussir votre participation à un salon professionnel et optimiser votre retour sur investissement.",
-    image: heroImage,
+    image: blogHeaderEditorial,
     category: "Salons",
     author: "Équipe BA ATTITUDE",
     date: "15 Décembre 2024",
