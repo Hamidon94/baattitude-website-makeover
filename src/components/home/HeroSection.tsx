@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import salonProfessionnel from "@/assets/salon-professionnel-vue-ensemble.jpg";
+import heroPanoramique from "@/assets/hero-salon-panoramique.jpg";
 import { useRef } from "react";
 
 export function HeroSection() {
@@ -25,7 +25,7 @@ export function HeroSection() {
         className="absolute inset-0"
       >
         <img
-          src={salonProfessionnel}
+          src={heroPanoramique}
           alt="Salon professionnel B2B en France - Prestations techniques événementielles BA ATTITUDE"
           className="w-full h-full object-cover"
         />

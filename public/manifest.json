@@ -1,14 +1,15 @@
 {
-  "name": "BA Attitude - Prestations Événementielles",
-  "short_name": "BA Attitude",
-  "description": "Spécialiste des prestations techniques pour salons professionnels et événements B2B en France et à l'international.",
+  "name": "BA ATTITUDE - Prestations Événementielles",
+  "short_name": "BA ATTITUDE",
+  "description": "Spécialiste des salons professionnels, foires et expositions B2B en France et à l'international",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#FFD700",
+  "background_color": "#0a0a0a",
+  "theme_color": "#b8860b",
   "orientation": "portrait-primary",
+  "lang": "fr-FR",
   "scope": "/",
-  "lang": "fr",
+  "id": "/",
   "icons": [
     {
       "src": "/favicon.png",
@@ -23,7 +24,7 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["business", "events"],
+  "categories": ["business", "events", "productivity"],
   "screenshots": [],
   "prefer_related_applications": false
 }

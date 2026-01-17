@@ -282,6 +282,13 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.7 - 17 Janvier 2025 (PWA SERVICE WORKER & IMAGES UNIQUES)
+- ✅ Service Worker PWA : cache offline, stratégie network-first
+- ✅ Nouvelle image hero panoramique unique (distinct de Salons Professionnels)
+- ✅ Manifest.json amélioré avec id, scope, lang fr-FR
+- ✅ Règle d'or images : aucun doublon entre hero et services
+- ✅ Service Worker avec gestion push notifications (future-ready)
+
 ### v3.6 - 16 Janvier 2025 (PWA & SITEMAP IMAGES)
 - ✅ PWA Manifest : manifest.json avec icônes, couleurs, orientation
 - ✅ Sitemap Images : sitemap-images.xml pour Google Images SEO
@@ -370,5 +377,5 @@ npm run preview
 
 ---
 
-*Dernière mise à jour : 15 janvier 2025*
-*Status : 100% COMPLET - Optimisé SEO/UX - Prêt pour production*
+*Dernière mise à jour : 17 janvier 2025*
+*Status : 100% COMPLET - PWA Ready - Optimisé SEO/UX - Prêt pour production*
