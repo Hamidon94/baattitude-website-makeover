@@ -309,6 +309,21 @@ npm run preview
 
 ## 📋 Changelog
 
+### v3.9 - 18 Janvier 2025 (AUDIT COMPLET - ZÉRO DOUBLON V2)
+- ✅ **6 nouvelles images uniques générées** pour remplacer tous les doublons
+  - `salon-montage-lyon-professionnel.jpg` → Services (Salons Pro) + Zones Intervention
+  - `about-equipe-reunion.jpg` → About.tsx (remplace equipeMontageStand dupliquée)
+  - `stand-luxe-scenographie.jpg` → Services (Scénographie) + About.tsx
+  - `blog-entrepot-logistique.jpg` → Blog (Article Conseils)
+  - `blog-evenement-corporate.jpg` → Blog (Article Prestataire)
+  - `blog-conference-internationale.jpg` → Blog (Article International)
+- ✅ **ScrollToTopButton** : bouton flottant pour remonter en haut
+- ✅ **loading="lazy"** ajouté sur images About.tsx
+- ✅ Services.tsx : images uniques par service
+- ✅ Blog.tsx : 6 images uniques, 0 doublon avec services
+- ✅ BlogArticle.tsx : images cohérentes avec Blog.tsx
+- ✅ ZonesIntervention.tsx : image unique salonMontage
+
 ### v3.8 - 17 Janvier 2025 (AUDIT IMAGES - ZÉRO DOUBLON)
 - ✅ **RÈGLE D'OR APPLIQUÉE** : Chaque image utilisée sur UNE SEULE page
 - ✅ Nouvelle image hero panoramique `hero-salon-panoramique.jpg` (Accueil)

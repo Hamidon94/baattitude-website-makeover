@@ -13,10 +13,10 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
-import heroSalonProfessionnel from "@/assets/hero-salon-professionnel.jpg";
+import salonMontage from "@/assets/salon-montage-lyon-professionnel.jpg";
 import equipeMontageStand from "@/assets/equipe-montage-stand.jpg";
 import logistiqueEntrepot from "@/assets/logistique-entrepot.jpg";
-import standScenographiePremium from "@/assets/stand-scenographie-premium.jpg";
+import standLuxe from "@/assets/stand-luxe-scenographie.jpg";
 import supportTechniqueRegie from "@/assets/support-technique-regie.jpg";
 import conferenceInternationale from "@/assets/conference-internationale.jpg";
 import { FAQSection } from "@/components/home/FAQSection";
@@ -26,7 +26,7 @@ const services = [
     id: "salons-professionnels",
     title: "Salons Professionnels",
     description: "Expertise complète pour vos participations aux salons, foires et expositions. Montage, démontage et coordination sur site.",
-    image: heroSalonProfessionnel,
+    image: salonMontage,
     features: ["Montage de stands", "Coordination terrain", "Gestion logistique"],
   },
   {
@@ -54,7 +54,7 @@ const services = [
     id: "scenographie-stands",
     title: "Scénographie de Stands",
     description: "Conception et réalisation de décors et scénographies sur mesure pour valoriser votre présence sur les salons.",
-    image: standScenographiePremium,
+    image: standLuxe,
     features: ["Design sur mesure", "Fabrication", "Installation"],
   },
   {
