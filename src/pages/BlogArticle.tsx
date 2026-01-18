@@ -17,8 +17,8 @@ import blogStandDesign from "@/assets/blog-stand-design.jpg";
 import blogLogistiqueWarehouse from "@/assets/blog-logistique-warehouse.jpg";
 import blogSupportTechnique from "@/assets/blog-support-technique.jpg";
 import blogInternationalEvent from "@/assets/blog-international-event.jpg";
-import serviceDecoration from "@/assets/service-decoration.jpg";
-import serviceScenography from "@/assets/service-scenography.jpg";
+import blogEntrepotLogistique from "@/assets/blog-entrepot-logistique.jpg";
+import blogEvenementCorporate from "@/assets/blog-evenement-corporate.jpg";
 
 const articlesData: Record<string, {
   title: string;
@@ -113,7 +113,7 @@ const articlesData: Record<string, {
   "montage-demontage-stands-bonnes-pratiques": {
     title: "Montage et démontage de stands : les bonnes pratiques",
     excerpt: "Optimisez vos temps de montage et démontage grâce à nos conseils issus de 15 ans d'expérience sur les plus grands salons.",
-    image: serviceDecoration,
+    image: blogEntrepotLogistique,
     category: "Conseils",
     author: "Équipe BA ATTITUDE",
     date: "5 Décembre 2024",
@@ -148,7 +148,7 @@ const articlesData: Record<string, {
   "tendances-stands-2024": {
     title: "Tendances des stands d'exposition en 2024",
     excerpt: "Éco-conception, technologie immersive, espaces modulables : les grandes tendances qui transforment les stands sur les salons professionnels.",
-    image: serviceScenography,
+    image: blogStandDesign,
     category: "Salons",
     author: "Équipe BA ATTITUDE",
     date: "28 Novembre 2024",

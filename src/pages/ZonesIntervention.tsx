@@ -7,7 +7,7 @@ import { FadeInSection, StaggerContainer, staggerItem } from "@/components/anima
 import { LocalBusinessSchema, FAQSchema, SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import zonesInterventionFrance from "@/assets/zones-intervention-france.jpg";
-import salonProImage from "@/assets/hero-salon-professionnel.jpg";
+import salonMontage from "@/assets/salon-montage-lyon-professionnel.jpg";
 
 // Données des régions avec leurs spécificités
 const regions = [
@@ -476,7 +476,7 @@ export default function ZonesIntervention() {
             <FadeInSection delay={0.2}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src={salonProImage}
+                  src={salonMontage}
                   alt="Vue d'ensemble salon professionnel France"
                   className="w-full h-auto object-cover"
                 />

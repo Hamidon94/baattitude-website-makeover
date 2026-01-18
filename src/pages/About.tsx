@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ParallaxSection, FadeInSection } from "@/components/animations/ParallaxSection";
 import { SEOHead, LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import aboutTeam from "@/assets/about-team.jpg";
-import equipeMontageStand from "@/assets/equipe-montage-stand.jpg";
-import standScenographiePremium from "@/assets/stand-scenographie-premium.jpg";
+import aboutEquipeReunion from "@/assets/about-equipe-reunion.jpg";
+import standLuxe from "@/assets/stand-luxe-scenographie.jpg";
 
 const values = [
   {
@@ -166,21 +166,23 @@ export default function About() {
             <FadeInSection>
               <div className="aspect-video rounded-lg overflow-hidden border border-border">
                 <img
-                  src={equipeMontageStand}
-                  alt="Équipe de monteurs de stands BA ATTITUDE en action sur un salon professionnel à Paris"
+                  src={aboutEquipeReunion}
+                  alt="Réunion de coordination de l'équipe BA ATTITUDE pour un projet événementiel"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <p className="mt-4 text-sm text-muted-foreground text-center">
-                Notre équipe en action lors d'un montage de stand
+                Notre équipe en réunion de coordination projet
               </p>
             </FadeInSection>
             <FadeInSection delay={0.2}>
               <div className="aspect-video rounded-lg overflow-hidden border border-border">
                 <img
-                  src={standScenographiePremium}
-                  alt="Stand scénographique premium réalisé par BA ATTITUDE avec éclairage design"
+                  src={standLuxe}
+                  alt="Stand d'exposition luxe réalisé par BA ATTITUDE avec scénographie premium"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <p className="mt-4 text-sm text-muted-foreground text-center">

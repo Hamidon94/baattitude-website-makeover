@@ -6,11 +6,11 @@ import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { ArrowRight, Calendar, User, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import blogHeaderEditorial from "@/assets/blog-header-editorial.jpg";
-import serviceDecoration from "@/assets/service-decoration.jpg";
-import serviceScenography from "@/assets/service-scenography.jpg";
-import serviceLogistique from "@/assets/service-logistique.jpg";
-import serviceCorporate from "@/assets/service-corporate.jpg";
-import serviceInternational from "@/assets/service-international.jpg";
+import blogEntrepotLogistique from "@/assets/blog-entrepot-logistique.jpg";
+import blogStandDesign from "@/assets/blog-stand-design.jpg";
+import blogEvenementCorporate from "@/assets/blog-evenement-corporate.jpg";
+import blogConferenceInternationale from "@/assets/blog-conference-internationale.jpg";
+import blogSupportTechnique from "@/assets/blog-support-technique.jpg";
 
 const categories = ["Tous", "Salons", "Logistique", "Conseils", "International"];
 
@@ -30,7 +30,7 @@ const articles = [
     id: "logistique-evenementielle-internationale",
     title: "Logistique événementielle internationale : défis et solutions",
     excerpt: "Comment organiser la logistique d'un événement à l'étranger ? Transport, douanes, coordination locale : nos conseils d'experts.",
-    image: serviceInternational,
+    image: blogConferenceInternationale,
     category: "International",
     author: "Équipe BA ATTITUDE",
     date: "10 Décembre 2024",
@@ -41,7 +41,7 @@ const articles = [
     id: "montage-demontage-stands-bonnes-pratiques",
     title: "Montage et démontage de stands : les bonnes pratiques",
     excerpt: "Optimisez vos temps de montage et démontage grâce à nos conseils issus de 15 ans d'expérience sur les plus grands salons.",
-    image: serviceLogistique,
+    image: blogEntrepotLogistique,
     category: "Conseils",
     author: "Équipe BA ATTITUDE",
     date: "5 Décembre 2024",
@@ -52,7 +52,7 @@ const articles = [
     id: "tendances-stands-2024",
     title: "Tendances des stands d'exposition en 2024",
     excerpt: "Éco-conception, technologie immersive, espaces modulables : les grandes tendances qui transforment les stands sur les salons professionnels.",
-    image: serviceScenography,
+    image: blogStandDesign,
     category: "Salons",
     author: "Équipe BA ATTITUDE",
     date: "28 Novembre 2024",
@@ -63,7 +63,7 @@ const articles = [
     id: "choisir-prestataire-evenementiel",
     title: "Comment choisir son prestataire événementiel B2B ?",
     excerpt: "Les critères essentiels pour sélectionner un partenaire fiable pour vos salons et événements professionnels.",
-    image: serviceCorporate,
+    image: blogEvenementCorporate,
     category: "Conseils",
     author: "Équipe BA ATTITUDE",
     date: "20 Novembre 2024",
@@ -74,7 +74,7 @@ const articles = [
     id: "securite-salons-professionnels",
     title: "Sécurité sur les salons professionnels : normes et obligations",
     excerpt: "Réglementation, normes ERP, équipements obligatoires : tout ce que vous devez savoir sur la sécurité lors de vos événements.",
-    image: serviceDecoration,
+    image: blogSupportTechnique,
     category: "Logistique",
     author: "Équipe BA ATTITUDE",
     date: "15 Novembre 2024",
