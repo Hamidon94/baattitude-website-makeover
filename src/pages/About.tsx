@@ -5,9 +5,19 @@ import { ArrowRight, Award, Users, Heart, Shield, Quote, CheckCircle, Building2,
 import { Button } from "@/components/ui/button";
 import { ParallaxSection, FadeInSection } from "@/components/animations/ParallaxSection";
 import { SEOHead, LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { OrganizationSchema, HowToSchema } from "@/components/seo/WebsiteSchema";
 import aboutTeam from "@/assets/about-team.jpg";
 import aboutEquipeReunion from "@/assets/about-equipe-reunion.jpg";
 import standLuxe from "@/assets/stand-luxe-scenographie.jpg";
+
+// Timeline data for HowTo schema (company evolution)
+const companyTimeline = [
+  { name: "2008 - Création", text: "Fondation de BA Attitude à Paris, spécialisée dans les prestations techniques événementielles." },
+  { name: "2012 - Expansion", text: "Premiers projets internationaux et développement du réseau européen." },
+  { name: "2016 - Croissance", text: "100ème salon professionnel accompagné, consolidation de l'expertise." },
+  { name: "2020 - Résilience", text: "Adaptation et diversification des services pendant la période difficile." },
+  { name: "2024 - Leadership", text: "Reconnaissance comme référence du secteur B2B avec 500+ projets par an." }
+];
 
 const values = [
   {
@@ -68,10 +78,17 @@ export default function About() {
         ogType="website"
       />
       <LocalBusinessSchema />
+      <OrganizationSchema />
       <BreadcrumbSchema items={[
         { name: "Accueil", url: "https://baattitude.fr" },
         { name: "À Propos", url: "https://baattitude.fr/a-propos" },
       ]} />
+      <HowToSchema
+        name="L'histoire de BA ATTITUDE"
+        description="15 ans d'évolution dans les prestations techniques événementielles"
+        steps={companyTimeline}
+        totalTime="P15Y"
+      />
 
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">

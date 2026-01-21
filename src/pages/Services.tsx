@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, ArrowRight, CheckCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
-import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { SEOHead, BreadcrumbSchema, FAQSchema } from "@/components/seo/StructuredData";
+import { ItemListSchema, HowToSchema } from "@/components/seo/WebsiteSchema";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -20,6 +21,32 @@ import standLuxe from "@/assets/stand-luxe-scenographie.jpg";
 import supportTechniqueRegie from "@/assets/support-technique-regie.jpg";
 import conferenceInternationale from "@/assets/conference-internationale.jpg";
 import { FAQSection } from "@/components/home/FAQSection";
+
+// FAQ data for structured data
+const servicesFaqs = [
+  { question: "Quels types de stands montez-vous ?", answer: "Nous intervenons sur tous types de stands : modulaires (Octanorm, Maxima, Aluvision), sur mesure en bois ou métal, parapluie. De 9m² à plusieurs centaines de m²." },
+  { question: "Dans quels délais pouvez-vous intervenir ?", answer: "24 à 48h en Île-de-France, 72h sur le reste de la France. Équipes de remplacement disponibles en urgence." },
+  { question: "Proposez-vous des forfaits tout compris ?", answer: "Oui, nous proposons des forfaits incluant montage, maintenance événement, démontage et évacuation." },
+  { question: "Intervenez-vous à l'international ?", answer: "Oui, nous accompagnons nos clients dans plus de 30 pays avec notre réseau de partenaires locaux." }
+];
+
+// Services for ItemList schema
+const servicesSchemaData = [
+  { name: "Salons Professionnels", url: "https://baattitude.fr/services/salons-professionnels", description: "Montage et coordination de stands" },
+  { name: "Support Technique", url: "https://baattitude.fr/services/support-technique", description: "Assistance technique 24/7" },
+  { name: "Montage & Démontage", url: "https://baattitude.fr/services/montage-demontage", description: "Installation professionnelle" },
+  { name: "Logistique & Coordination", url: "https://baattitude.fr/services/logistique-coordination", description: "Transport et manutention" },
+  { name: "Scénographie Stands", url: "https://baattitude.fr/services/scenographie-stands", description: "Design sur mesure" },
+  { name: "International", url: "https://baattitude.fr/services/international", description: "Coordination multi-pays" }
+];
+
+// Methodology steps for HowTo schema  
+const methodologySteps = [
+  { name: "Étude & Devis", text: "Analyse de votre cahier des charges, visite technique du site si nécessaire, établissement d'un devis détaillé." },
+  { name: "Planification", text: "Définition du planning d'intervention, coordination avec les organisateurs et autres prestataires." },
+  { name: "Installation", text: "Montage par nos équipes qualifiées dans le respect des délais et des normes de sécurité." },
+  { name: "Démontage", text: "Repli soigné après l'événement, évacuation du matériel et remise en état des lieux." }
+];
 
 const services = [
   {
@@ -97,6 +124,18 @@ export default function Services() {
           { name: "Accueil", url: "https://baattitude.fr" },
           { name: "Nos Services", url: "https://baattitude.fr/services" }
         ]} 
+      />
+      <FAQSchema faqs={servicesFaqs} />
+      <ItemListSchema 
+        name="Services BA ATTITUDE"
+        description="Prestations techniques complètes pour salons professionnels et événements B2B"
+        items={servicesSchemaData}
+      />
+      <HowToSchema
+        name="Méthodologie d'intervention BA ATTITUDE"
+        description="Notre processus en 4 étapes pour réussir votre salon professionnel"
+        steps={methodologySteps}
+        totalTime="P2W"
       />
 
       {/* Breadcrumb UI */}

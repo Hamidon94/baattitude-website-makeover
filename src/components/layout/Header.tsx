@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -100,7 +100,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6" aria-label="Navigation principale">
             {navigation.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -115,14 +115,22 @@ export function Header() {
                   to={item.href}
                   onMouseEnter={() => handleLinkHover(item.href)}
                   className={cn(
-                    "relative text-sm font-medium tracking-wide transition-colors duration-300 py-2 flex items-center gap-1",
+                    "relative text-sm font-medium tracking-wide transition-colors duration-300 py-2 flex items-center gap-1 whitespace-nowrap",
                     location.pathname === item.href || (item.hasDropdown && location.pathname.startsWith("/services"))
                       ? "text-primary"
                       : "text-card-foreground hover:text-primary"
                   )}
                 >
                   {item.name}
-                  {item.hasDropdown && <ChevronDown className="w-3 h-3" aria-hidden="true" />}
+                  {item.hasDropdown && (
+                    <ChevronDown 
+                      className={cn(
+                        "w-3 h-3 transition-transform duration-200",
+                        isServicesOpen && "rotate-180"
+                      )} 
+                      aria-hidden="true" 
+                    />
+                  )}
                   {(location.pathname === item.href || (item.hasDropdown && location.pathname.startsWith("/services"))) && (
                     <motion.div
                       layoutId="activeNav"
@@ -132,36 +140,47 @@ export function Header() {
                   )}
                 </Link>
 
-                {/* Services Dropdown */}
+                {/* Services Dropdown - Fixed visibility and positioning */}
                 {item.hasDropdown && (
                   <AnimatePresence>
                     {isServicesOpen && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl overflow-hidden"
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-card border border-border rounded-xl shadow-2xl overflow-hidden z-50"
+                        style={{ 
+                          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.1)'
+                        }}
                         role="menu"
                         aria-label="Sous-menu Services"
                       >
-                        {services.map((service) => (
-                          <Link
-                            key={service.href}
-                            to={service.href}
-                            onMouseEnter={() => handleLinkHover(service.href)}
-                            className="block px-4 py-3 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                            role="menuitem"
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                        <div className="border-t border-border">
-                          <Link
-                            to="/services"
-                            className="block px-4 py-3 text-sm text-primary font-medium hover:bg-primary/10 transition-colors"
-                          >
-                            Tous nos services →
-                          </Link>
+                        {/* Dropdown arrow */}
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-card border-l border-t border-border" />
+                        
+                        <div className="relative bg-card py-2">
+                          {services.map((service, serviceIndex) => (
+                            <Link
+                              key={service.href}
+                              to={service.href}
+                              onMouseEnter={() => handleLinkHover(service.href)}
+                              className="flex items-center gap-3 px-4 py-3 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 group"
+                              role="menuitem"
+                            >
+                              <span className="w-2 h-2 rounded-full bg-primary/30 group-hover:bg-primary transition-colors" />
+                              {service.name}
+                            </Link>
+                          ))}
+                          <div className="border-t border-border mt-2 pt-2">
+                            <Link
+                              to="/services"
+                              className="flex items-center justify-between px-4 py-3 text-sm text-primary font-medium hover:bg-primary/10 transition-colors"
+                            >
+                              <span>Tous nos services</span>
+                              <ArrowRight className="w-4 h-4" />
+                            </Link>
+                          </div>
                         </div>
                       </motion.div>
                     )}
