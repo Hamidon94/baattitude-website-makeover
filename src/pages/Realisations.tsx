@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { ItemListSchema } from "@/components/seo/WebsiteSchema";
 import { ArrowUpRight, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ParallaxSection, FadeInSection } from "@/components/animations/ParallaxSection";
@@ -125,6 +126,13 @@ export default function Realisations() {
     (project) => activeCategory === "Tous" || project.category === activeCategory
   );
 
+  // Projects for ItemList schema
+  const projectsSchemaData = projects.map(project => ({
+    name: `${project.title} - ${project.client}`,
+    url: `https://baattitude.fr/realisations/${project.id}`,
+    description: project.description
+  }));
+
   return (
     <Layout>
       <SEOHead
@@ -135,6 +143,11 @@ export default function Realisations() {
         ogType="website"
       />
       <BreadcrumbSchema items={realisationsBreadcrumbs} />
+      <ItemListSchema
+        name="Réalisations BA ATTITUDE"
+        description="Portfolio de nos interventions sur salons professionnels et événements B2B"
+        items={projectsSchemaData}
+      />
       
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">

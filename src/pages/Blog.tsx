@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { SEOHead, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { ItemListSchema } from "@/components/seo/WebsiteSchema";
 import { ArrowRight, Calendar, User, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import blogHeaderEditorial from "@/assets/blog-header-editorial.jpg";
@@ -98,6 +99,13 @@ export default function Blog() {
   const featuredArticle = filteredArticles.find(a => a.featured);
   const regularArticles = filteredArticles.filter(a => !a.featured);
 
+  // Articles for ItemList schema
+  const articlesSchemaData = articles.map(article => ({
+    name: article.title,
+    url: `https://baattitude.fr/blog/${article.id}`,
+    description: article.excerpt
+  }));
+
   return (
     <Layout>
       <SEOHead
@@ -108,6 +116,11 @@ export default function Blog() {
         ogType="website"
       />
       <BreadcrumbSchema items={blogBreadcrumbs} />
+      <ItemListSchema
+        name="Blog BA ATTITUDE - Ressources événementielles"
+        description="Articles et guides pour réussir vos salons professionnels et événements B2B"
+        items={articlesSchemaData}
+      />
       
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">

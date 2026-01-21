@@ -309,6 +309,31 @@ npm run preview
 
 ## 📋 Changelog
 
+### v4.0 - 21 Janvier 2025 (SEO AVANCÉ POUR IA + MENU FIX)
+
+#### 🎯 SEO Optimisé pour Google, ChatGPT, Perplexity, IA
+- ✅ **Nouveau fichier `WebsiteSchema.tsx`** : 6 schémas avancés
+  - `WebsiteSchema` : Identité site + SearchAction pour sitelinks
+  - `OrganizationSchema` : Profil complet entreprise, knowsAbout, aggregateRating
+  - `ServiceSchema` : Schéma par service avec priceSpecification
+  - `HowToSchema` : Méthodologie en étapes pour AI answer boxes
+  - `ItemListSchema` : Listes structurées (services, projets, articles)
+  - `SpeakableSchema` : Optimisation recherche vocale
+- ✅ **Index.tsx** : 6 schémas structurés (WebsiteSchema, OrganizationSchema, LocalBusinessSchema, ItemListSchema, HowToSchema, FAQSchema ready)
+- ✅ **Services.tsx** : FAQSchema, ItemListSchema, HowToSchema pour méthodologie
+- ✅ **About.tsx** : OrganizationSchema, HowToSchema pour timeline
+- ✅ **Blog.tsx** : ItemListSchema pour articles
+- ✅ **Realisations.tsx** : ItemListSchema pour portfolio
+
+#### 🔧 Corrections UX
+- ✅ **Menu dropdown Services** : 
+  - Position centrée avec flèche indicatrice
+  - Animation améliorée (scale + fade)
+  - Z-index fixé, shadow élégante
+  - Chevron rotation animation
+  - Bullet points visuels sur items
+  - Navigation responsive améliorée
+
 ### v3.9 - 18 Janvier 2025 (AUDIT COMPLET - ZÉRO DOUBLON V2)
 - ✅ **6 nouvelles images uniques générées** pour remplacer tous les doublons
   - `salon-montage-lyon-professionnel.jpg` → Services (Salons Pro) + Zones Intervention
@@ -323,16 +348,6 @@ npm run preview
 - ✅ Blog.tsx : 6 images uniques, 0 doublon avec services
 - ✅ BlogArticle.tsx : images cohérentes avec Blog.tsx
 - ✅ ZonesIntervention.tsx : image unique salonMontage
-
-### v3.8 - 17 Janvier 2025 (AUDIT IMAGES - ZÉRO DOUBLON)
-- ✅ **RÈGLE D'OR APPLIQUÉE** : Chaque image utilisée sur UNE SEULE page
-- ✅ Nouvelle image hero panoramique `hero-salon-panoramique.jpg` (Accueil)
-- ✅ Nouvelle image `zones-intervention-france.jpg` (Zones d'intervention)
-- ✅ Nouvelle image `blog-header-editorial.jpg` (Blog featured)
-- ✅ Nouvelles images blog uniques : `blog-stand-design.jpg`, `blog-logistique-warehouse.jpg`, `blog-support-technique.jpg`, `blog-international-event.jpg`
-- ✅ Correction About.tsx : utilise `equipe-montage-stand.jpg` et `stand-scenographie-premium.jpg`
-- ✅ Sitemap.xml mis à jour avec date 2025-01-17
-- ✅ README mis à jour avec mapping complet des 35+ images
 
 ### v3.7 - 17 Janvier 2025 (PWA SERVICE WORKER)
 - ✅ Service Worker PWA : cache offline, stratégie network-first
