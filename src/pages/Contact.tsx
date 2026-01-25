@@ -11,19 +11,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { SEOHead, LocalBusinessSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { ContactPageSchema, ActionSchema, WebPageSchema } from "@/components/seo/AdvancedSchemas";
+import { SpeakableSchema } from "@/components/seo/WebsiteSchema";
 
 const contactFaqs = [
   {
-    question: "Quel est votre délai de réponse ?",
-    answer: "Nous nous engageons à répondre à toutes les demandes sous 24h ouvrées. Pour les demandes urgentes, n'hésitez pas à nous appeler directement.",
+    question: "Quel est votre délai de réponse pour une demande de devis ?",
+    answer: "Nous nous engageons à répondre à toutes les demandes sous 24h ouvrées avec un devis détaillé sous 48h. Pour les demandes urgentes pendant les périodes de salon, n'hésitez pas à nous appeler directement au 06 01 59 19 20.",
   },
   {
-    question: "Comment obtenir un devis ?",
-    answer: "Remplissez le formulaire de demande de devis en 4 étapes. Plus vous êtes précis (type d'événement, lieu, dates), plus notre proposition sera adaptée à vos besoins.",
+    question: "Comment obtenir un devis pour un salon professionnel ?",
+    answer: "Remplissez le formulaire de demande de devis en 4 étapes ci-dessous. Plus vous êtes précis (type d'événement, lieu exact, dates, surface du stand, type de structure), plus notre proposition sera adaptée à vos besoins et votre budget.",
   },
   {
-    question: "Intervenez-vous en urgence ?",
-    answer: "Oui, notre réactivité est l'une de nos forces. Selon la complexité du projet, nous pouvons intervenir sous 48 à 72h. Contactez-nous par téléphone pour les demandes urgentes.",
+    question: "Intervenez-vous en urgence sur les salons ?",
+    answer: "Oui, notre réactivité est l'une de nos forces. Nous pouvons intervenir sous 24-48h en Île-de-France et 72h sur le reste de la France. Pendant les périodes de montage/démontage, notre équipe est mobilisable 24h/24. Contactez-nous par téléphone pour les demandes urgentes.",
+  },
+  {
+    question: "Quels sont vos horaires de disponibilité ?",
+    answer: "Nos bureaux sont ouverts du lundi au vendredi de 9h à 18h. Pendant les événements, nous assurons une permanence 24h/24 et 7j/7 avec une ligne d'urgence dédiée à nos clients.",
+  },
+  {
+    question: "Travaillez-vous avec des agences événementielles ?",
+    answer: "Oui, plus de 80% de nos clients sont des agences événementielles et standistes. Nous intervenons en marque blanche avec discrétion et professionnalisme. Nos devis peuvent être présentés sous votre enseigne.",
   },
 ];
 
@@ -36,15 +46,23 @@ export default function Contact() {
   return (
     <Layout>
       <SEOHead
-        title="Contact & Devis Gratuit | BA ATTITUDE - Prestataire Événementiel Paris"
-        description="Demandez un devis gratuit pour vos salons professionnels et événements B2B. Réponse sous 24h. BA ATTITUDE, votre partenaire événementiel en Île-de-France."
+        title="Contact & Devis Gratuit | BA ATTITUDE - Prestataire Événementiel Paris, Lyon, France"
+        description="Demandez un devis gratuit pour vos salons professionnels et événements B2B. Réponse sous 24h, devis détaillé sous 48h. BA ATTITUDE, votre partenaire événementiel en Île-de-France et France entière. Tél: 01 77 00 09 52."
         canonical="https://baattitude.fr/contact"
         ogUrl="https://baattitude.fr/contact"
         ogType="website"
       />
+      <WebPageSchema
+        name="Contact BA ATTITUDE - Devis Gratuit Événementiel"
+        description="Demandez un devis gratuit pour vos salons professionnels. Réponse sous 24h."
+        url="https://baattitude.fr/contact"
+        breadcrumb={contactBreadcrumbs}
+        speakable={["h1", ".contact-info", ".faq-answer"]}
+      />
+      <ContactPageSchema />
       <LocalBusinessSchema
         name="BA ATTITUDE"
-        description="Prestataire technique événementiel spécialisé dans les salons professionnels et événements B2B en France et à l'international."
+        description="Prestataire technique événementiel spécialisé dans les salons professionnels et événements B2B en France et à l'international. Montage de stands, logistique, coordination terrain."
         telephone="+33177000952"
         email="contact@baattitude.fr"
         address={{
@@ -54,9 +72,10 @@ export default function Contact() {
           addressCountry: "FR",
         }}
         openingHours={["Mo-Fr 09:00-18:00"]}
-        areaServed={["Paris", "Île-de-France", "France", "Europe"]}
+        areaServed={["Paris", "Île-de-France", "Lyon", "Marseille", "Bordeaux", "Lille", "France", "Europe"]}
         serviceType={[
-          "Montage de stands",
+          "Devis gratuit salons professionnels",
+          "Montage de stands exposition",
           "Démontage de stands",
           "Logistique événementielle",
           "Support technique salons",
@@ -65,6 +84,13 @@ export default function Contact() {
       />
       <FAQSchema faqs={contactFaqs} />
       <BreadcrumbSchema items={contactBreadcrumbs} />
+      <SpeakableSchema cssSelector={["h1", ".contact-info", ".faq-question", ".faq-answer"]} />
+      <ActionSchema
+        actionType="ContactAction"
+        name="Demander un Devis Gratuit"
+        target="https://baattitude.fr/contact#form"
+        description="Remplissez notre formulaire pour obtenir un devis personnalisé sous 48h"
+      />
       
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">
